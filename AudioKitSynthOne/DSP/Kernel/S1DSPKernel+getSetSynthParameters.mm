@@ -6,7 +6,7 @@
 //  Copyright © 2018 AudioKit. All rights reserved.
 //
 
-#import <AudioKit/AudioKit-swift.h>
+#import <AudioKit/AudioKit-Swift.h>
 #import "S1DSPKernel.hpp"
 
 
@@ -15,7 +15,7 @@ float S1DSPKernel::getSynthParameter(S1Parameter param) {
     if (s.usePortamento)
         return s.portamentoTarget;
     else
-        return p[param];
+        return parameters[param];
 }
 
 void S1DSPKernel::_setSynthParameter(S1Parameter param, float inputValue) {
@@ -24,7 +24,7 @@ void S1DSPKernel::_setSynthParameter(S1Parameter param, float inputValue) {
     if (s.usePortamento) {
         s.portamentoTarget = value;
     } else {
-        p[param] = value;
+        parameters[param] = value;
     }
 }
 
@@ -46,11 +46,24 @@ void S1DSPKernel::_rateHelper(S1Parameter parameter, float inputValue, bool noti
         return;
     }
 
-    if (p[tempoSyncToArpRate] > 0.f) {
+    // arpSeqTempoMultiplier
+    if (parameter == arpSeqTempoMultiplier) {
+        const float value = clampedValue(parameter, inputValue);
+        S1RateArgs syncdValue = _rate.nearestFactor(value);
+        _setSynthParameter(parameter, syncdValue.value);
+        _arpSeqTempoMultiplier = {parameter, 1.f - syncdValue.value01, syncdValue.value, payload};
+        if (notifyMainThread) {
+            dependentParameterDidChange(_arpSeqTempoMultiplier);
+        }
+        return;
+    }
+
+    // lfo1Rate, lfo2Rate, autoPanFrequency
+    if (parameters[tempoSyncToArpRate] > 0.f) {
         // tempo sync
         if (parameter == lfo1Rate || parameter == lfo2Rate || parameter == autoPanFrequency) {
             const float value = clampedValue(parameter, inputValue);
-            S1RateArgs syncdValue = _rate.nearestFrequency(value, p[arpRate], minimum(parameter), maximum(parameter));
+            S1RateArgs syncdValue = _rate.nearestFrequency(value, parameters[arpRate], minimum(parameter), maximum(parameter));
             _setSynthParameter(parameter, syncdValue.value);
             DependentParameter outputDP = {S1Parameter::S1ParameterCount, 0.f, 0.f, 0};
             switch(parameter) {
@@ -71,18 +84,17 @@ void S1DSPKernel::_rateHelper(S1Parameter parameter, float inputValue, bool noti
             }
         } else if (parameter == delayTime) {
             const float value = clampedValue(parameter, inputValue);
-            S1RateArgs syncdValue = _rate.nearestTime(value, p[arpRate], minimum(parameter), maximum(parameter));
+            S1RateArgs syncdValue = _rate.nearestTime(value, parameters[arpRate], minimum(parameter), maximum(parameter));
             _setSynthParameter(parameter, syncdValue.value);
             _delayTime = {parameter, 1.f - syncdValue.value01, syncdValue.value, payload};
-            DependentParameter outputDP = _delayTime;
             if (notifyMainThread) {
-                dependentParameterDidChange(outputDP);
+                dependentParameterDidChange(_delayTime);
             }
         }
     } else {
         // no tempo sync
         _setSynthParameter(parameter, inputValue);
-        const float val = p[parameter];
+        const float val = parameters[parameter];
         const float min = minimum(parameter);
         const float max = maximum(parameter);
         const float val01 = clamp((val - min) / (max - min), 0.f, 1.f);
@@ -119,18 +131,19 @@ void S1DSPKernel::_setSynthParameterHelper(S1Parameter parameter, float inputVal
         _rateHelper(lfo2Rate, getSynthParameter(lfo2Rate), notifyMainThread, payload);
         _rateHelper(autoPanFrequency, getSynthParameter(autoPanFrequency), notifyMainThread, payload);
         _rateHelper(delayTime, getSynthParameter(delayTime), notifyMainThread, payload);
-    } else if (parameter == lfo1Rate || parameter == lfo2Rate || parameter == autoPanFrequency || parameter == delayTime) {
+    } else if (parameter == lfo1Rate ||
+               parameter == lfo2Rate ||
+               parameter == autoPanFrequency ||
+               parameter == delayTime ||
+               parameter == pitchbend ||
+               parameter == arpSeqTempoMultiplier) {
         // dependent params
-        _rateHelper(parameter, inputValue, notifyMainThread, payload);
-    } else if (parameter == pitchbend) {
         _rateHelper(parameter, inputValue, notifyMainThread, payload);
     } else {
         // special case for updating the tuning table based on frequency at A4.
         // see https://en.wikipedia.org/wiki/A440_(pitch_standard)
         if (parameter == frequencyA4) {
             _setSynthParameter(parameter, truncf(inputValue));
-            const float mca = getParameter(parameter); // must use getter value
-            AKPolyphonicNode.tuningTable.middleCFrequency = mca * exp2((60.f - 69.f)/12.f);
         } else if (parameter == portamentoHalfTime) {
             _setSynthParameter(parameter, inputValue);
             const float actualValue = getParameter(portamentoHalfTime);

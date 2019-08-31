@@ -19,7 +19,9 @@
 // helper for midi/render thread communication: held+playing notes
 typedef struct NoteNumber {
     int noteNumber;
-    float amplitude;
+    int transpose;
+    int velocity;
+    float amp;
 } NoteNumber;
 
 // helper for render/main thread communication:
@@ -52,10 +54,15 @@ typedef struct S1ArpBeatCounter {
 
 
 @protocol S1Protocol
+
 -(void)dependentParameterDidChange:(DependentParameter)dependentParam;
+
 -(void)arpBeatCounterDidChange:(S1ArpBeatCounter)arpBeatCounter;
+
 -(void)heldNotesDidChange:(HeldNotes)heldNotes;
+
 -(void)playingNotesDidChange:(PlayingNotes)playingNotes;
+
 @end
 
 @interface S1AudioUnit : AKAudioUnit
@@ -67,10 +74,6 @@ typedef struct S1ArpBeatCounter {
 @property (nonatomic) NSArray *parameters;
 @property (nonatomic, weak) id<S1Protocol> s1Delegate;
 
-///auv3, not yet used
-- (void)setParameter:(AUParameterAddress)address value:(AUValue)value;
-- (AUValue)getParameter:(AUParameterAddress)address;
-- (void)createParameters;
 
 - (float)getSynthParameter:(S1Parameter)param;
 - (void)setSynthParameter:(S1Parameter)param value:(float)value;
@@ -81,8 +84,9 @@ typedef struct S1ArpBeatCounter {
 - (float)getMaximum:(S1Parameter)param;
 - (float)getDefault:(S1Parameter)param;
 
-- (void)setupWaveform:(UInt32)waveform size:(int)size;
-- (void)setWaveform:(UInt32)waveform withValue:(float)value atIndex:(UInt32)index;
+- (void)setupWaveform:(UInt32)tableIndex size:(int)size;
+- (void)setWaveform:(UInt32)tableIndex withValue:(float)value atIndex:(UInt32)sampleIndex;
+- (void)setBandlimitFrequency:(UInt32)blIndex withFrequency:(float)frequency;
 
 - (void)stopNote:(uint8_t)note;
 - (void)startNote:(uint8_t)note velocity:(uint8_t)velocity;
@@ -92,6 +96,16 @@ typedef struct S1ArpBeatCounter {
 - (void)stopAllNotes;
 - (void)resetDSP;
 - (void)resetSequencer;
+
+// S1TuningTable protocol
+- (void)setTuningTable:(float)frequency index:(int)index;
+- (float)getTuningTableFrequency:(int)index;
+- (void)setTuningTableNPO:(int)npo;
+
+///auv3, not yet used
+- (void)setParameter:(AUParameterAddress)address value:(AUValue)value;
+- (AUValue)getParameter:(AUParameterAddress)address;
+- (void)createParameters;
 
 // protected passthroughs for S1Protocol called by DSP on main thread
 - (void)dependentParameterDidChange:(DependentParameter)param;

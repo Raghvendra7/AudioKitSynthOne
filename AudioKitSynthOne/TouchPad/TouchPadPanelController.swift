@@ -49,6 +49,15 @@ class TouchPadPanelController: PanelController {
 
         touchPad1.resetToPosition(lfoRate, lfoAmp)
         touchPad2.resetToPosition(pad2X, rez)
+
+		// Sets the read order for VoiceOver
+		view.accessibilityElements = [
+			touchPad1 as Any,
+			snapToggle as Any,
+			touchPad2 as Any,
+			leftNavButton as Any,
+			rightNavButton as Any
+		]
     }
 
     public override func viewDidAppear(_ animated: Bool) {
@@ -56,6 +65,7 @@ class TouchPadPanelController: PanelController {
 
         // super's updateAllUI call is causing race conditions in updating UI in this class
         //conductor.updateAllUI()
+       
     }
 
     // MARK: - Touch Pad Callbacks
@@ -189,11 +199,11 @@ class TouchPadPanelController: PanelController {
 
     func createParticles() {
         particleEmitter1.frame = touchPad1.bounds
-        particleEmitter1.renderMode = kCAEmitterLayerAdditive
+        particleEmitter1.renderMode = CAEmitterLayerRenderMode.additive
         particleEmitter1.emitterPosition = CGPoint(x: -400, y: -400)
 
         particleEmitter2.frame = touchPad2.bounds
-        particleEmitter2.renderMode = kCAEmitterLayerAdditive
+        particleEmitter2.renderMode = CAEmitterLayerRenderMode.additive
         particleEmitter2.emitterPosition = CGPoint(x: -400, y: -400)
 
         let particleCell = makeEmitterCellWithColor(#colorLiteral(red: 0.9019607843, green: 0.5333333333, blue: 0.007843137255, alpha: 1))

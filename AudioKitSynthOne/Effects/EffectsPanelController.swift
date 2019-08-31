@@ -31,7 +31,7 @@ class EffectsPanelController: PanelController {
 
     @IBOutlet weak var sampleRateKnob: MIDIKnob!
 
-    @IBOutlet weak var autoPanAmountKnob: Knob!
+    @IBOutlet weak var autoPanAmountKnob: MIDIKnob!
     @IBOutlet weak var autoPanRateKnob: MIDIKnob!
 
     @IBOutlet weak var reverbSizeKnob: MIDIKnob!
@@ -55,8 +55,8 @@ class EffectsPanelController: PanelController {
     @IBOutlet weak var tempoSyncToggle: ToggleButton!
 
     override func viewDidLoad() {
-        super.viewDidLoad()
 
+        super.viewDidLoad()
         currentPanel = .effects
         guard let s = conductor.synth else {
             AKLog("EffectsPanel view state is invalid because synth is not instantiated")
@@ -140,6 +140,46 @@ class EffectsPanelController: PanelController {
             s.setDependentParameter(.delayTime, value, self.conductor.delayTimeEffectsPanelID)
             self.conductor.updateDisplayLabel(.delayTime, value: s.getSynthParameter(.delayTime))
         }
+
+
+		view.accessibilityElements = [
+			lfo1WavePicker!,
+			lfo1RateKnob!,
+			lfo1AmpKnob!,
+			lfo2WavePicker!,
+			lfo2RateKnob!,
+			lfo2AmpKnob!,
+			cutoffLFOToggle!,
+			resonanceLFOToggle!,
+			oscMixLFOToggle!,
+			reverbMixLFOToggle!,
+			decayLFOToggle!,
+			noiseLFOToggle!,
+			fmModLFOToggle!,
+			detuneLFOToggle!,
+			filterEnvLFOToggle!,
+			pitchLFOToggle!,
+			bitcrushLFOToggle!,
+			tremoloLFOToggle!,
+			tempoSyncToggle!,
+			sampleRateKnob!,
+			autoPanRateKnob!,
+			autoPanAmountKnob!,
+			reverbToggle!,
+			reverbSizeKnob!,
+			reverbLowCutKnob!,
+			reverbMixKnob!,
+			delayToggle!,
+			delayTimeKnob!,
+			delayFeedbackKnob!,
+			delayMixKnob!,
+			phaserRateKnob!,
+			phaserNotchWidthKnob!,
+			phaserFeedbackKnob!,
+			phaserMixKnob!,
+			leftNavButton!,
+			rightNavButton!
+		]
     }
 
     func dependentParameterDidChange(_ dependentParameter: DependentParameter) {

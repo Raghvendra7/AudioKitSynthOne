@@ -11,11 +11,13 @@
 extension Manager: PresetsDelegate {
 
     func presetDidChange(_ newActivePreset: Preset) {
+
+        //TODO: Aure: You added this reset on 7/10/2018...it creates audio artifacts...was this intentional?
         conductor.synth.reset()
 
         activePreset = newActivePreset
 
-        if let headerVC = self.childViewControllers.first as? HeaderViewController {
+        if let headerVC = self.children.first as? HeaderViewController {
             headerVC.activePreset = activePreset
         }
 
@@ -39,12 +41,12 @@ extension Manager: PresetsDelegate {
             self.octaveStepper.value = Double(self.activePreset.octavePosition)
         }
 
-        // Save Current Preset
+        // Save App Settings
         saveAppSettingValues()
     }
 
     func updateDisplay(_ message: String) {
-        if let headerVC = self.childViewControllers.first as? HeaderViewController {
+        if let headerVC = self.children.first as? HeaderViewController {
             headerVC.displayLabel.text = message
         }
     }

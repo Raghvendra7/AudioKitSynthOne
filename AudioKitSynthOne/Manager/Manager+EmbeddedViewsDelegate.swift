@@ -11,11 +11,19 @@
 extension Manager: EmbeddedViewsDelegate {
 
     func switchToChildPanel(_ newView: ChildPanel, isOnTop: Bool = true) {
+        
+        if conductor.device == .phone {
+            if keyboardToggle.isOn {
+                keyboardToggle.value = 0.0
+                keyboardToggle.callback(0.0)
+            }
+        }
 
         // remove all child views
         if isOnTop {
             topContainerView.subviews.forEach { $0.removeFromSuperview() }
         } else {
+            guard conductor.device == .pad else { return }
             bottomContainerView.subviews.forEach { $0.removeFromSuperview() }
         }
 
@@ -56,7 +64,7 @@ extension Manager: EmbeddedViewsDelegate {
 
         // Get all Child Synth Panels
         var synthPanels = [PanelController]()
-        for view in childViewControllers {
+        for view in children {
             guard let synthPanel = view as? PanelController else { continue }
             synthPanels.append(synthPanel)
         }

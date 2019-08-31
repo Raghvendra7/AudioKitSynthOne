@@ -10,9 +10,7 @@
 
 void S1DSPKernel::destroy() {
     for(int i = 0; i< S1Parameter::S1ParameterCount; i++) {
-        if (s1p[i].usePortamento) {
-            sp_port_destroy(&s1p[i].portamento);
-        }
+        sp_port_destroy(&s1p[i].portamento);
     }
     sp_port_destroy(&monoFrequencyPort);
 
@@ -36,14 +34,6 @@ void S1DSPKernel::destroy() {
     sp_buthp_destroy(&butterworthHipassR);
     sp_crossfade_destroy(&revCrossfadeL);
     sp_crossfade_destroy(&revCrossfadeR);
-    sp_compressor_destroy(&compressorMasterL);
-    sp_compressor_destroy(&compressorMasterR);
-    sp_compressor_destroy(&compressorReverbInputL);
-    sp_compressor_destroy(&compressorReverbInputR);
-    sp_compressor_destroy(&compressorReverbWetL);
-    sp_compressor_destroy(&compressorReverbWetR);
-    free(noteStates);
-    free(monoNote);
 }
 
 

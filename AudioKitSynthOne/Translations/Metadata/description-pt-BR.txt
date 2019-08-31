@@ -1,0 +1,68 @@
+"Um grande passo adiante para criação de músicas no celular" - CDM (Create Digital Music)
+"Inovador aplicativo de sintetizador para iOS" - Cult of Mac
+"Download obrigatório para todos os usuários de iPad" - MacBreak
+
+*** Apicativo da semana - Stuff.tv ***
+*** Apicativo gratuito da semana - TechRadar ***
+*** Melhor aplicativo de sintetizador grátis para iPad - EM Magazine ***
+
+"O AudioKit Synth One é um sintetizador gratuito e repleto de recursos para o seu iPad, incluindo mais de 300 presets criadas por designers de som profissionais que trabalharam com M83, Tycho e Rihanna" - Engadget
+
+O AudioKit Synth One é o primeiro aplicativo de sintetizador para iOS totalmente gratuito e de código aberto na história. Sem anúncios. Sem necessidade de comprar qualquer pacote ou funcionalidade. Sempre será grátis.
+
+"Um grande exemplo de esforço humano" 
+- Gaz Williams, Sonic State
+
+"Um esforço impressionante ... Qualidade de som incrível!" 
+- Francis Preve, Electronic Musician Magazine
+
+"Poderoso... Impressionante "- Synthtopia.com
+"Um aplicativo de sintetizador incrível para o seu iPad e é o mais próximo de uma feitiçaria possível" - GarageBand Guide
+"Sintetizador para iOS obrigatório" - Synth Anatomy
+"Te deixa de boca aberta... imediatamente divertido ao começar a mexer! "- discchord
+"Sintetizador incrível e brilhante ... Fantásticos sons!"- The Sound Test Room 
+"Um trabalho de amor que todos possam desfrutar" - Music Radar
+
+Saber mais: 
+audiokitpro.com/synth
+
+Criado por mais de 100 voluntários em todo o mundo (incluindo designers de som para M83, Rihanna, Kanye West, Neon Trees, Mike Posner, Tycho e outros), este aplicativo inclui suporte MIDI (toque com um teclado ou controlador MIDI), sequenciador, filtros analógicos vintage, arpejadores expressivos, delays analógicos e mais de 300 presets para você começar!
+
+Envie-nos sua música e bugs: hello@audiokitpro.com
+
+RECURSOS DO SYNTH ONE:
+Este sintetizador é totalmente gratuito, totalmente funcional e livre de anúncios. Não há nenhum IAP ou qualquer coisa para comprar - é o melhor aplicativo de instrumento de música gratuito para iPad!
+
+• Sintetizador híbrido analógico / FM Poly
+• Mais de 300 presets criados por designers de som famosos
+• Audiobus 3 e Inter-app Audio (IAA)
+• Ableton Link
+• Cinco Osciladores (2 DCO, FM, Sub, Noise)
+• 2 LFOs com mais de uma dúzia de possibilidades de roteamento
+• Sequenciador de 16 Steps de estilo Vintage
+• Arpejador poly clássico
+• MIDI in (Controle com um teclado MIDI ou AudioBus / IAA)
+• Envelopes ADSR sensíveis ao toque ​​para Amp & Filter
+• Oscilador FM com Mod
+• Mono glide e legato
+• Seno/Quadrado Dedicado -12/24 Sub Osc
+• Filtro Low-Pass vintage de 4 pólos
+• Filtros High-Pass/Band Pass
+• Lindo Reverb Costello
+• Delay de multi-toque (pingue-pongue)
+• TouchPads
+• Importar/Exportar Preset & Bank e Mais…
+
+BONUS: O código fonte completo está agora disponível!
+AudiokitPro.com/Synth
+
+E mais, o código é completamente aberto. Use o código para aprender como construir seu próprio aplicativo de sintetizador ou modificar o aplicativo você mesmo!
+
+VÍDEO OFICIAL: https://youtu.be/hwDNgCYowYs
+
+"Barulhos incríveis que farão seus ouvidos chorarem de alegria" - Stuff Magazine
+Melhor da Semana - MacBreak
+
+Futuro desenvolvimento:
+• Suporte a MPE (Toque com um Roli Seaboard)
+• Suporte a Plug-ins AUv3

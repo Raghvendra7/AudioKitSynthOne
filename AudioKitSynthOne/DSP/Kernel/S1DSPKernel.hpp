@@ -9,20 +9,24 @@
 
 #pragma once
 
+#import <array>
 #import <vector>
 #import <list>
+#import <optional>
 #import <string>
 #import "AudioKit/AKSoundpipeKernel.hpp"
 #import "S1AudioUnit.h"
 #import "S1Parameter.h"
 #import "S1Rate.hpp"
+#import "../Sequencer/S1Sequencer.hpp"
+#import "S1DSPCompressor.hpp"
 
 @class AEArray;
 @class AEMessageQueue;
 
 #define S1_FTABLE_SIZE (4096)
-#define S1_NUM_FTABLES (4)
-#define S1_SAMPLE_RATE (44100.f)
+#define S1_NUM_WAVEFORMS (4)
+#define S1_NUM_BANDLIMITED_FTABLES (13)
 
 #define S1_RELEASE_AMPLITUDE_THRESHOLD (0.01f)
 #define S1_PORTAMENTO_HALF_TIME (0.1f)
@@ -31,6 +35,9 @@
 #ifdef __cplusplus
 
 struct S1NoteState;
+class S1Sequencer;
+using DSPParameters = std::array<float, S1Parameter::S1ParameterCount>;
+using NoteStateArray = std::array<S1NoteState, S1_MAX_POLYPHONY>;
 
 class S1DSPKernel : public AKSoundpipeKernel, public AKOutputBuffered {
 
@@ -38,19 +45,27 @@ class S1DSPKernel : public AKSoundpipeKernel, public AKOutputBuffered {
 
 public:
     
-    S1DSPKernel();
-    
+    S1DSPKernel(int _channels, double _sampleRate);
+
+    // Dont allow default construction, copying or moving of Kernel.
+    S1DSPKernel() = delete;
+    S1DSPKernel(S1DSPKernel&&) = delete;
+    S1DSPKernel(const S1DSPKernel&) = delete;
+
     ~S1DSPKernel();
 
     // public accessor for protected sp
-    sp_data *spp() {
+    inline sp_data *spp() {
         return sp;
+    }
+    inline int sampleRate() {
+        return sp->sr;
     }
 
     float getSynthParameter(S1Parameter param);
     void setSynthParameter(S1Parameter param, float value);
 
-    // lfo1Rate, lfo2Rate, autoPanRate, and delayTime; returns on [0,1]
+    // lfo1Rate, lfo2Rate, autoPanRate, delayTime, and arpSeqTempoMultiplier; returns on [0,1]
     float getDependentParameter(S1Parameter param);
     void setDependentParameter(S1Parameter param, float value, int payload);
 
@@ -104,6 +119,9 @@ public:
     virtual void handleMIDIEvent(AUMIDIEvent const& midiEvent) override;
     
     void init(int _channels, double _sampleRate) override;
+
+    // Restore Parameter Values to DSP
+    void restoreValues(std::optional<DSPParameters> params);
     
     void destroy();
     
@@ -112,10 +130,12 @@ public:
     // initializeNoteStates() must be called AFTER init returns
     void initializeNoteStates();
     
-    void setupWaveform(uint32_t waveform, uint32_t size);
-    
-    void setWaveformValue(uint32_t waveform, uint32_t index, float value);
-    
+    void setupWaveform(uint32_t tableIndex, uint32_t size);
+
+    void setWaveformValue(uint32_t tableIndex, uint32_t sampleIndex, float value);
+
+    void setBandlimitFrequency(uint32_t blIndex, float frequency);
+
     ///parameter min
     float minimum(S1Parameter i);
     
@@ -142,9 +162,12 @@ public:
 
 private:
 
+    S1Sequencer sequencer;
     // moved the private functions to try to get rid of errors, I don't think we need to be that worried about privacy
 
 public:
+    
+    void updateWavetableIncrementValuesForCurrentSampleRate();
 
     void _setSynthParameter(S1Parameter param, float inputValue01);
 
@@ -160,14 +183,14 @@ public:
     float taper(float inputValue01, float min, float max, float taper);
     float taperInverse(float inputValue01, float min, float max, float taper);
 
-    S1AudioUnit* audioUnit;
+    __weak S1AudioUnit* audioUnit;
     
     bool resetted = false;
     
     int arpBeatCounter = 0;
     
     /// dsp params
-    float p[S1Parameter::S1ParameterCount];
+    DSPParameters parameters;
     
     // Portamento values
     float monoFrequency = 440.f * exp2((60.f - 69.f)/12.f);
@@ -182,8 +205,9 @@ public:
     PlayingNotes aePlayingNotes;
     
     HeldNotes aeHeldNotes;
-    
-    sp_ftbl *ft_array[S1_NUM_FTABLES];
+
+    sp_ftbl *ft_array[S1_NUM_WAVEFORMS * S1_NUM_BANDLIMITED_FTABLES];
+    float   ft_frequencyBand[S1_NUM_BANDLIMITED_FTABLES];
 
     sp_ftbl *sine;
     
@@ -196,7 +220,18 @@ public:
     
     float monoFrequencySmooth = 261.6255653006f;
 
+    // S1TuningTable protocol
+    void setTuningTable(float value, int index);
+    float getTuningTableFrequency(int index);
+    void setTuningTableNPO(int npo);
+
 private:
+    std::array<std::atomic<float>, 128> tuningTable;
+    std::atomic<int> tuningTableNPO{12};
+
+    // private tuningTable lookup
+    double tuningTableNoteToHz(int noteNumber);
+
     S1Rate _rate;
     
     DependentParameter _lfo1Rate;
@@ -208,6 +243,8 @@ private:
     DependentParameter _delayTime;
     
     DependentParameter _pitchbend;
+
+    DependentParameter _arpSeqTempoMultiplier;
     
     void dependentParameterDidChange(DependentParameter param);
 
@@ -219,23 +256,6 @@ private:
     
     ///can be called from within the render loop
     void heldNotesDidChange();
-
-    // helper for arp/seq
-    struct SeqNoteNumber {
-
-        int noteNumber;
-        int onOff;
-
-        void init() {
-            noteNumber = 60;
-            onOff = 1;
-        }
-
-        void init(int nn, int o) {
-            noteNumber = nn;
-            onOff = o;
-        }
-    };
     
     struct S1ParameterInfo {
         S1Parameter parameter;
@@ -249,12 +269,12 @@ private:
         sp_port *portamento;
         float portamentoTarget;
     };
-    
+
     // array of struct S1NoteState of count MAX_POLYPHONY
-    S1NoteState* noteStates;
+    std::unique_ptr<NoteStateArray> noteStates;
     
     // monophonic: single instance of NoteState
-    S1NoteState* monoNote;
+    std::unique_ptr<S1NoteState> monoNote;
     
     bool initializedNoteStates = false;
     
@@ -284,8 +304,12 @@ private:
     sp_buthp *butterworthHipassR;
     sp_crossfade *revCrossfadeL;
     sp_crossfade *revCrossfadeR;
-    sp_compressor *compressorMasterL;
-    sp_compressor *compressorMasterR;
+    S1Compressor<compressorMasterRatio, compressorMasterThreshold,
+        compressorMasterAttack, compressorMasterRelease, compressorMasterMakeupGain> mCompMaster;
+    S1Compressor<compressorReverbInputRatio, compressorReverbInputThreshold,
+        compressorReverbInputAttack, compressorReverbInputRelease, compressorReverbInputMakeupGain> mCompReverbIn;
+    S1Compressor<compressorReverbWetRatio, compressorReverbWetThreshold,
+        compressorReverbWetAttack, compressorReverbWetRelease, compressorReverbWetMakeupGain> mCompReverbWet;
     sp_compressor *compressorReverbInputL;
     sp_compressor *compressorReverbInputR;
     sp_compressor *compressorReverbWetL;
@@ -299,30 +323,23 @@ private:
     float bitcrushSampleIndex = 0.f;
     float bitcrushValue = 0.f;
 
-    // Arp/Seq
-    double sampleCounter = 0;
-    double arpSampleCounter = 0;
-    double arpTime = 0;
-    int notesPerOctave = 12;
-    
-    ///once init'd: sequencerNotes can be accessed and mutated only within process and resetDSP
-    std::vector<SeqNoteNumber> sequencerNotes;
-    std::vector<NoteNumber> sequencerNotes2;
-    const int maxSequencerNotes = 1024; // 128 midi note numbers * 4 arp octaves * up+down
+    // Count samples to limit main thread notification
+    double processSampleCounter = 0;
     
     ///once init'd: sequencerLastNotes can be accessed and mutated only within process and resetDSP
     std::list<int> sequencerLastNotes;
+
     
     // Array of midi note numbers of NoteState's which have had a noteOn event but not yet a noteOff event.
-    NSMutableArray<NSNumber*>* heldNoteNumbers;
+    NSMutableArray<NSValue*>* heldNoteNumbers;
     AEArray* heldNoteNumbersAE;
-    
+
     // These expressions come from Rate.swift which is used for beat sync
     const float minutesPerSecond = 1.f / 60.f;
     const float beatsPerBar = 4.f;
     const float bpm_min = 1.f;
     const float bpm_max = 200.f;
-    const float bars_min = 1.f / 64.f;
+    const float bars_min = 1.f / 64.f / 1.5f;
     const float bars_max = 8.f;
     const float rate_min = 1.f / ( (beatsPerBar * bars_max) / (bpm_min * minutesPerSecond) ); //  0.00052 8 bars at 1bpm
     const float rate_max = 1.f / ( (beatsPerBar * bars_min) / (bpm_max * minutesPerSecond) ); // 53.3333
@@ -362,7 +379,7 @@ private:
         { masterVolume,          0, 0.5, 2, "masterVolume", "masterVolume", kAudioUnitParameterUnit_Generic, true, NULL},
         { bitCrushDepth,         1, 24, 24, "bitCrushDepth", "bitCrushDepth", kAudioUnitParameterUnit_Generic, false, NULL},// UNUSED
         { bitCrushSampleRate,    2048, 48000, 48000, "bitCrushSampleRate", "bitCrushSampleRate", kAudioUnitParameterUnit_Hertz, true, NULL},
-        { autoPanAmount,         0, 0, 1, "autoPanAmount", "autoPanAmount", kAudioUnitParameterUnit_Generic, false, NULL},
+        { autoPanAmount,         0, 0, 1, "autoPanAmount", "autoPanAmount", kAudioUnitParameterUnit_Generic, true, NULL},
         { autoPanFrequency,      rate_min, 0.25, 10, "autoPanFrequency", "autoPanFrequency", kAudioUnitParameterUnit_Hertz, true, NULL},
         { reverbOn,              0, 1, 1, "reverbOn", "reverbOn", kAudioUnitParameterUnit_Generic, true, NULL},
         { reverbFeedback,        0, 0.5, 1, "reverbFeedback", "reverbFeedback", kAudioUnitParameterUnit_Generic, true, NULL},
@@ -370,7 +387,7 @@ private:
         { reverbMix,             0, 0, 1, "reverbMix", "reverbMix", kAudioUnitParameterUnit_Generic, true, NULL},
         { delayOn,               0, 0, 1, "delayOn", "delayOn", kAudioUnitParameterUnit_Generic, true, NULL},
         { delayFeedback,         0, 0.1, 0.9, "delayFeedback", "delayFeedback", kAudioUnitParameterUnit_Generic, true, NULL},
-        { delayTime,             0.0003628117914, 0.25, 2.5, "delayTime", "delayTime", kAudioUnitParameterUnit_Seconds, false, NULL},
+        { delayTime,             0.0003628117914, 0.25, 2.5, "delayTime", "delayTime", kAudioUnitParameterUnit_Seconds, true, NULL},
         { delayMix,              0, 0.125, 1, "delayMix", "delayMix", kAudioUnitParameterUnit_Generic, true, NULL},
         { lfo2Index,             0, 0, 3, "lfo2Index", "lfo2Index", kAudioUnitParameterUnit_Generic, false, NULL},
         { lfo2Amplitude,         0, 0, 1, "lfo2Amplitude", "lfo2Amplitude", kAudioUnitParameterUnit_Generic, true, NULL},
@@ -478,8 +495,19 @@ private:
         { pitchbendMinSemitones,  -24, -12, 0, "pitchbendMinSemitones", "pitchbendMinSemitones", kAudioUnitParameterUnit_Generic, false, NULL},
         { pitchbendMaxSemitones,  0, 12, 24, "pitchbendMaxSemitones", "pitchbendMaxSemitones", kAudioUnitParameterUnit_Generic, false, NULL},
         
-        { frequencyA4,  410, 440, 470, "frequencyA4", "frequencyA4", kAudioUnitParameterUnit_Hertz, false, NULL},
-        { portamentoHalfTime, 0.000001, 0.1, 0.99, "portamentoHalfTime", "portamentoHalfTime", kAudioUnitParameterUnit_Generic, false, NULL }
+        { frequencyA4,  410, 440, 470, "frequencyA4", "frequencyA4", kAudioUnitParameterUnit_Hertz, true, NULL},
+        { portamentoHalfTime, 0.000001, 0.1, 0.99, "portamentoHalfTime", "portamentoHalfTime", kAudioUnitParameterUnit_Generic, true, NULL },
+
+        /* DEPRECATED -1 = no override, else = index into bandlimited wavetable */
+        { oscBandlimitIndexOverride, -1, -1, (S1_NUM_BANDLIMITED_FTABLES-1), "oscBandlimitIndexOverride", "oscBandlimitIndexOverride", kAudioUnitParameterUnit_Generic, false, NULL },
+        { oscBandlimitEnable, 0, 0, 1, "oscBandlimitEnable", "oscBandlimitEnable", kAudioUnitParameterUnit_Generic, false, NULL},
+
+        { arpSeqTempoMultiplier, bars_min, 0.25, bars_max, "arpSeqTempoMultiplier", "arpSeqTempoMultiplier", kAudioUnitParameterUnit_Generic, false, NULL},
+
+        { transpose, -24, 0, 24, "transpose", "transpose", kAudioUnitParameterUnit_Generic, false, NULL},
+
+        { adsrPitchTracking, 0, 0, 1, "adsrPitchTracking", "adsrPitchTracking", kAudioUnitParameterUnit_Generic, true, NULL}
+
     };
 };
 #endif

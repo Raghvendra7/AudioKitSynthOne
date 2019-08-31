@@ -8,35 +8,68 @@
 
 import AudioKit
 
-protocol S1Control: class {
-    var value: Double { get set }
-    var callback: (Double) -> Void { get set }
-}
-
-typealias S1ControlCallback = (S1Parameter, S1Control?) -> ((_: Double) -> Void)
-
 class Conductor: S1Protocol {
+
     static var sharedInstance = Conductor()
-    var neverSleep = false
+
+    var neverSleep = false {
+        didSet {
+            UIApplication.shared.isIdleTimerDisabled = neverSleep
+        }
+    }
+
     var backgroundAudio = false
+
     var banks: [Bank] = []
+
     var synth: AKSynthOne!
+
     var bindings: [(S1Parameter, S1Control)] = []
+
+    var defaultValues: [Double] = []
+
     var heldNoteCount: Int = 0
+
     private var audioUnitPropertyListener: AudioUnitPropertyListener!
+
     let lfo1RateEffectsPanelID: Int32 = 1
+
     let lfo2RateEffectsPanelID: Int32 = 2
+
     let autoPanEffectsPanelID: Int32 = 3
+
     let delayTimeEffectsPanelID: Int32 = 4
+
     let lfo1RateTouchPadID: Int32 = 5
+
     let lfo1RateModWheelID: Int32 = 6
+
     let lfo2RateModWheelID: Int32 = 7
+
     let pitchBendID: Int32 = 8
+
+    let arpSeqTempoMultiplierID: Int32 = 9
 
     var iaaTimer: Timer = Timer()
 
     public var viewControllers: Set<UpdatableViewController> = []
+
     fileprivate var started = false
+    
+    let device = UIDevice.current.userInterfaceIdiom  
+
+    func updateDefaultValues() {
+        let parameterCount = S1Parameter.S1ParameterCount.rawValue
+        defaultValues = [Double](repeating: 0, count: Int(parameterCount))
+        for address in 0..<parameterCount {
+            guard let parameter: S1Parameter = S1Parameter(rawValue: address)
+            else {
+                AKLog("ERROR: S1Parameter enum out of range: \(address)")
+                return
+        }
+        defaultValues[Int(address)] = self.synth.getSynthParameter(parameter)
+      }
+    }
 
     func bind(_ control: S1Control,
               to parameter: S1Parameter,
@@ -45,11 +78,27 @@ class Conductor: S1Protocol {
         bindings.append(binding)
         let control = binding.1
         if let cb = closure {
+
             // custom closure
             control.callback = cb(parameter, control)
+            control.defaultCallback = defaultParameter(parameter, control)
         } else {
+
             // default closure
             control.callback = changeParameter(parameter, control)
+            control.defaultCallback = defaultParameter(parameter, control)
+        }
+    }
+
+    var defaultParameter: S1ControlDefaultCallback  = { parameter, control in
+        return {
+            if sharedInstance.defaultValues.count != S1Parameter.S1ParameterCount.rawValue { return }
+            sharedInstance.synth.setSynthParameter(parameter, sharedInstance.defaultValues[Int(parameter.rawValue)])
+            sharedInstance.updateSingleUI(parameter, control: nil, value: sharedInstance.defaultValues[Int(parameter.rawValue)])
+        }
+        } {
+        didSet {
+            AKLog("WARNING: defaultParameter callback changed")
         }
     }
 
@@ -182,6 +231,9 @@ class Conductor: S1Protocol {
 
     // called by DSP on main thread
     func dependentParameterDidChange(_ parameter: DependentParameter) {
+
+        // add panels with dependent parameters here
+
         let effectsPanel = self.viewControllers.first(where: { $0 is EffectsPanelController })
             as? EffectsPanelController
         effectsPanel?.dependentParameterDidChange(parameter)
@@ -189,6 +241,9 @@ class Conductor: S1Protocol {
         let touchPadPanel = self.viewControllers.first(where: { $0 is TouchPadPanelController })
             as? TouchPadPanelController
         touchPadPanel?.dependentParameterDidChange(parameter)
+
+        let sequencerPanel = self.viewControllers.first(where: { $0 is SequencerPanelController }) as? SequencerPanelController
+        sequencerPanel?.dependentParameterDidChange(parameter)
 
         let manager = self.viewControllers.first(where: { $0 is Manager }) as? Manager
         manager?.dependentParameterDidChange(parameter)
@@ -270,7 +325,25 @@ class Conductor: S1Protocol {
 
         iaaTimer.invalidate()
 
-        AKLog("disconnected with timer")
+        AKLog("deactivated session")
+    }
+}
+
+
+extension Conductor: S1TuningTable {
+
+    func setTuningTableNPO(_ npo: Int) {
+        
+        synth.setTuningTableNPO(npo)
     }
 
+    func setTuningTable(_ frequency: Double, index: Int) {
+
+        synth.setTuningTable(frequency, index: index)
+    }
+
+    func getTuningTableFrequency(_ index: Int) -> Double {
+
+        return Double( synth.getTuningTableFrequency(index) )
+    }
 }

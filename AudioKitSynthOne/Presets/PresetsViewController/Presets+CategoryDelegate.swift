@@ -12,6 +12,7 @@ extension PresetsViewController: CategoryDelegate {
 
     func categoryDidChange(_ newCategoryIndex: Int) {
         categoryIndex = newCategoryIndex
+        selectCurrentPreset()
     }
 
     func bankShare() {
@@ -30,7 +31,7 @@ extension PresetsViewController: CategoryDelegate {
             activityItems: [path],
             applicationActivities: nil)
         activityViewController.excludedActivityTypes = [
-            UIActivityType.copyToPasteboard
+            UIActivity.ActivityType.copyToPasteboard
         ]
 
         if let popoverPresentationController = activityViewController.popoverPresentationController {

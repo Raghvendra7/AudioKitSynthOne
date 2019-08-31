@@ -23,7 +23,7 @@ class PresetEditorViewController: UIViewController {
     weak var delegate: PresetPopOverDelegate?
 
     var preset = Preset()
-    var categories = ["none", "arp/seq", "poly", "pad", "lead", "bass", "pluck"]
+    var categories = [""]
     let cellReuseIdentifier = "PopUpCell"
     var categoryIndex = 0
 
@@ -48,12 +48,22 @@ class PresetEditorViewController: UIViewController {
         // Setup Picker
         //conductor.banks = conductor.banks.sorted { $0.position < $1.position }
         pickerBankNames = conductor.banks.map { $0.name }
-        if let index = pickerBankNames.index(of: preset.bank) {
+        if let index = pickerBankNames.firstIndex(of: preset.bank) {
             bankPicker.selectRow(index, inComponent: 0, animated: true)
             bankSelected = preset.bank
         }
+        
+        // pull all preset categories
+        categories.removeAll()
+        for i in 0...PresetCategory.categoryCount {
+            categories.append((PresetCategory(rawValue: i)?.description())!)
+        }
 
         setupCallbacks()
+		
+		categoryTableView.accessibilityLabel = NSLocalizedString("Categories", comment: "Categories")
+		categoryTableView.accessibilityHint = NSLocalizedString("Sets catagory for a preset.", comment: "Sets catagory for a preset.")
+		
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -62,8 +72,10 @@ class PresetEditorViewController: UIViewController {
         categoryTableView.reloadData()
 
         // Populate Preset current values
-        categoryIndex = preset.category.hashValue
+        categoryIndex = preset.category
+        
         let indexPath = IndexPath(row: categoryIndex, section: 0)
+        guard preset.category >= 0 && preset.category < PresetCategory.categoryCount else { return }
         categoryTableView.selectRow(at: indexPath, animated: true, scrollPosition: .middle)
     }
 
@@ -173,6 +185,22 @@ extension PresetEditorViewController: UIPickerViewDelegate {
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         bankSelected = pickerBankNames[row]
+    }
+
+}
+
+// MARK: - UITextFieldDelegate
+
+extension PresetEditorViewController: UITextFieldDelegate {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameTextField.resignFirstResponder()
+        return true
     }
 
 }

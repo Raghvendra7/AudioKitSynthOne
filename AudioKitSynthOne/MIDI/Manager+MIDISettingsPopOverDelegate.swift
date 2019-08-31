@@ -11,7 +11,7 @@
 extension Manager: MIDISettingsPopOverDelegate {
 
     func resetMIDILearn() {
-        for knob in midiKnobs { knob.midiCC = 255 }
+        for control in midiControls { control.midiCC = 255 }
         saveAppSettingValues()
     }
 
@@ -39,8 +39,23 @@ extension Manager: MIDISettingsPopOverDelegate {
     func didToggleBackgroundAudio(_ value: Bool) {
         saveAppSettingValues()
     }
-
-    public func storeTuningWithPresetDidChange(_ value: Bool) {
-        appSettings.saveTuningWithPreset = value
+    
+    func didToggleNeverSleep() {
+        saveAppSettingValues()
     }
+    
+    func didSetBuffer() {
+        saveAppSettingValues()
+    }
+
+    func didToggleStoreTuningWithPreset(_ value: Bool) {
+        appSettings.saveTuningWithPreset = value
+        saveAppSettingValues()
+    }
+
+    func didToggleLaunchWithLastTuning(_ value: Bool) {
+        appSettings.launchWithLastTuning = value
+        saveAppSettingValues()
+    }
+
 }

@@ -15,17 +15,35 @@ class ArpDirectionButton: UIView, S1Control {
 
     public var callback: (Double) -> Void = { _ in }
 
+    var defaultCallback: () -> Void = {  }
+
+    let range: ClosedRange<Double> =  0...2
+
     private var width: CGFloat = 35.0
 
     var value = 0.0 {
         didSet {
-           setNeedsDisplay()
+            setNeedsDisplay()
+
+            switch value {
+            case 0.0:
+                accessibilityValue = NSLocalizedString("Up", comment: "Up")
+            case 1.0:
+                accessibilityValue = NSLocalizedString("Up Down", comment: "Up Down")
+            default:
+                accessibilityValue = NSLocalizedString("Down", comment: "Down")
+            }
+
         }
     }
 
     // Draw Button
     override func draw(_ rect: CGRect) {
-        ArpDirectionStyleKit.drawArpDirectionButton(directionSelected: CGFloat(value))
+        ArpDirectionStyleKit.drawArpDirectionButton(frame: CGRect(x: 0,
+                                                                  y: 0,
+                                                                  width: self.bounds.width,
+                                                                  height: self.bounds.height),
+                                                    directionSelected: CGFloat(value))
     }
 
     // MARK: - Handle Touches
@@ -33,7 +51,6 @@ class ArpDirectionButton: UIView, S1Control {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let touchPoint = touch.location(in: self)
-
             switch touchPoint.x {
             case 0..<width:
                 value = 0
@@ -45,4 +62,14 @@ class ArpDirectionButton: UIView, S1Control {
             callback(value)
         }
     }
+
+    override func accessibilityActivate() -> Bool {
+        if value < 2.0 {
+            value += 1.0
+        } else {
+            value = 0.0
+        }
+        return true
+    }
+    
 }

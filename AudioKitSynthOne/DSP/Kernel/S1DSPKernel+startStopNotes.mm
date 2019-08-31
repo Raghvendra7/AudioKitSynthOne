@@ -6,16 +6,10 @@
 //  Copyright © 2018 AudioKit. All rights reserved.
 //
 
-#import <AudioKit/AudioKit-swift.h>
+#import <AudioKit/AudioKit-Swift.h>
 #import "S1DSPKernel.hpp"
 #import "AEArray.h"
 
-// Convert note number to [possibly] microtonal frequency.  12ET is the default.
-// Profiling shows that while this takes a special Swift lock it still resolves to ~0% of CPU on a device
-//TODO: make an instance method
-static inline double tuningTableNoteToHz(int noteNumber) {
-    return [AKPolyphonicNode.tuningTable frequencyForNoteNumber:noteNumber];
-}
 
 // NOTE ON
 // startNote is not called by render thread, but turnOnKey is
@@ -23,8 +17,7 @@ void S1DSPKernel::startNote(int noteNumber, int velocity) {
     if (noteNumber < 0 || noteNumber >= S1_NUM_MIDI_NOTES)
         return;
 
-    const float frequency = tuningTableNoteToHz(noteNumber);
-    startNote(noteNumber, velocity, frequency);
+    startNote(noteNumber, velocity, 1.f); // freq unused
 }
 
 // NOTE ON
@@ -33,16 +26,29 @@ void S1DSPKernel::startNote(int noteNumber, int velocity, float frequency) {
     if (noteNumber < 0 || noteNumber >= S1_NUM_MIDI_NOTES)
         return;
 
-    NSNumber* nn = @(noteNumber);
-    [heldNoteNumbers removeObject:nn];
-    [heldNoteNumbers insertObject:nn atIndex:0];
+    NoteNumber existingNote;
+    for(int i = 0; i < heldNoteNumbers.count; i++) {
+        NSValue* value = heldNoteNumbers[i];
+        [value getValue:&existingNote];
+        if(existingNote.noteNumber == noteNumber) {
+            [heldNoteNumbers removeObjectAtIndex:i];
+            break;
+        }
+    }
+
+    NoteNumber note = {noteNumber, (int)parameters[transpose], velocity};
+    NSValue *value = [NSValue valueWithBytes:&note objCType:@encode(NoteNumber)];
+    [heldNoteNumbers insertObject:value atIndex:0];
     [heldNoteNumbersAE updateWithContentsOfArray:heldNoteNumbers];
 
+    // the tranpose feature leads to the override the AKPolyphonicNode::startNote frequency
+    const float frequencyTranposeOverride = tuningTableNoteToHz(noteNumber + (int)parameters[transpose]);
+
     // ARP/SEQ
-    if (p[arpIsOn] == 1.f) {
+    if (parameters[arpIsOn] == 1.f) {
         return;
     } else {
-        turnOnKey(noteNumber, velocity, frequency);
+        turnOnKey(noteNumber, velocity, frequencyTranposeOverride);
     }
 }
 
@@ -52,12 +58,23 @@ void S1DSPKernel::stopNote(int noteNumber) {
     if (noteNumber < 0 || noteNumber >= S1_NUM_MIDI_NOTES)
         return;
 
-    NSNumber* nn = @(noteNumber);
-    [heldNoteNumbers removeObject: nn];
+    NSInteger index = -1;
+    NoteNumber existingNote;
+    for(int i = 0; i < heldNoteNumbers.count; i++) {
+        NSValue* value = heldNoteNumbers[i];
+        [value getValue:&existingNote];
+        if(existingNote.noteNumber == noteNumber) {
+            index = i;
+            break;
+        }
+    }
+    if(index != -1)
+        [heldNoteNumbers removeObjectAtIndex:index];
+
     [heldNoteNumbersAE updateWithContentsOfArray: heldNoteNumbers];
 
     // ARP/SEQ
-    if (p[arpIsOn] == 1.f)
+    if (parameters[arpIsOn] == 1.f)
         return;
     else
         turnOffKey(noteNumber);
@@ -69,7 +86,7 @@ void S1DSPKernel::stopNote(int noteNumber) {
 void S1DSPKernel::stopAllNotes() {
     [heldNoteNumbers removeAllObjects];
     [heldNoteNumbersAE updateWithContentsOfArray:heldNoteNumbers];
-    if (p[isMono] > 0.f) {
+    if (parameters[isMono] > 0.f) {
         stopNote(60);
     } else {
         for(int i=0; i<S1_NUM_MIDI_NOTES; i++)

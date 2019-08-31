@@ -1,0 +1,1 @@
+Audiobus,Sintetizador Analógico,Sintetizador,Analógico,Sintetizador,SynthOne,AudioKit,Korg,Moog,Piano

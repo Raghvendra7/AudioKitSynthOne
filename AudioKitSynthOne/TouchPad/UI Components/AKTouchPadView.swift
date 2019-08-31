@@ -64,10 +64,13 @@ public class AKTouchPadView: UIView {
         super.init(coder: aDecoder)
 
         // Setup Touch Visual Indicators
-        touchPointView = TouchPoint(frame: CGRect(x: -200, y: -200, width: 63, height: 63))
+        var width = 63.0
+        if Conductor.sharedInstance.device == .phone { width = 44.0 }
+        touchPointView = TouchPoint(frame: CGRect(x: -200, y: -200, width: width, height: width))
+        touchPointView.width = width
         touchPointView.center = CGPoint(x: self.bounds.size.width / 2, y: self.bounds.size.height / 2)
         touchPointView.isOpaque = false
-        self.addSubview(touchPointView)
+        addSubview(touchPointView)
     }
 
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -101,7 +104,7 @@ public class AKTouchPadView: UIView {
         UIView.animate(
             withDuration: 0.2,
             delay: 0.0,
-            options: UIViewAnimationOptions(),
+            options: UIView.AnimationOptions(),
             animations: {
                 self.touchPointView.center = CGPoint(x: centerPointX, y: centerPointY)
             },
@@ -112,7 +115,7 @@ public class AKTouchPadView: UIView {
                                                                    taper: self.horizontalTaper)
                 self.verticalValue = Double(self.y).denormalized(to: self.verticalRange, taper: self.verticalTaper)
                 self.completionHandler(self.horizontalValue, self.verticalValue, true, true)
-        })
+            })
     }
 
     func updateTouchPoint(_ newX: Double, _ newY: Double) {
@@ -123,6 +126,8 @@ public class AKTouchPadView: UIView {
         touchPointView.center = CGPoint(x: centerPointX, y: centerPointY)
     }
 
+
+    //TODO: come back here
     func setPercentagesWithTouchPoint(_ touchPoint: CGPoint, began: Bool = false) {
         x = CGFloat((0.0 ... 1.0).clamp(touchPoint.x / self.bounds.size.width))
         y = CGFloat((0.0 ... 1.0).clamp(1 - touchPoint.y / self.bounds.size.height))

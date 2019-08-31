@@ -11,11 +11,15 @@
 		941645CD20B3597300D62851 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941645CC20B3597300D62851 /* NotificationService.swift */; };
 		941645D120B3597300D62851 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 941645CA20B3597300D62851 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		941752BA20E2BD2E0076D953 /* Starter Bank.json in Resources */ = {isa = PBXBuildFile; fileRef = 941752B920E2BD2E0076D953 /* Starter Bank.json */; };
+		94189CB8219F27130004C28B /* MoreAppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94189CB7219F27130004C28B /* MoreAppsController.swift */; };
 		94656AED205F410900634B2C /* KeyboardShowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94656AEC205F410900634B2C /* KeyboardShowButton.swift */; };
+		946980572169258A007EAA5B /* String+CapitalizeFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946980562169258A007EAA5B /* String+CapitalizeFirst.swift */; };
 		947956A91F329AB200FE5D9B /* Stepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947956A81F329AB100FE5D9B /* Stepper.swift */; };
 		947956AD1F329AB200FE5D9B /* StepperStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947956A51F329AB100FE5D9B /* StepperStyleKit.swift */; };
 		947956B31F32A70400FE5D9B /* ToggleSwitchStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947956B21F32A70300FE5D9B /* ToggleSwitchStyleKit.swift */; };
 		947956B61F32A72400FE5D9B /* ToggleSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947956B51F32A72400FE5D9B /* ToggleSwitch.swift */; };
+		9479F20321E4F9CE003605B9 /* iPhoneToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9479F20221E4F9CE003605B9 /* iPhoneToggleButton.swift */; };
+		9479F20521E4FB06003605B9 /* TopUIButtonStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9479F20421E4FB05003605B9 /* TopUIButtonStyleKit.swift */; };
 		9489EF631F3145ED00416F26 /* VerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C3A0E1F31428B0086D58B /* VerticalSlider.swift */; };
 		948C54C31F3A57C600DA6081 /* SynthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C54C21F3A57C600DA6081 /* SynthButton.swift */; };
 		948D33A91F4DFC08006E8276 /* FilterTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948D33A81F4DFC08006E8276 /* FilterTypeButton.swift */; };
@@ -24,6 +28,8 @@
 		949D93B71F2C188C007E657B /* LFOButtonStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949D93B61F2C188B007E657B /* LFOButtonStyleKit.swift */; };
 		949D93B91F2C188C007E657B /* LFOToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949D93B51F2C188B007E657B /* LFOToggle.swift */; };
 		94A5039D1FF2F6E30097D37C /* ChannelStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A5039C1FF2F6E30097D37C /* ChannelStepper.swift */; };
+		94AA87962216293F005BE569 /* TuneUpPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AA87952216293F005BE569 /* TuneUpPopUp.swift */; };
+		94D2AF2721EE57AA006E2312 /* Francis Preve.json in Resources */ = {isa = PBXBuildFile; fileRef = 94D2AF2621EE57AA006E2312 /* Francis Preve.json */; };
 		94D37DD420E06641002008A4 /* Sound of Izrael.json in Resources */ = {isa = PBXBuildFile; fileRef = 94D37DD320E06641002008A4 /* Sound of Izrael.json */; };
 		94D917AD1F550D0E006ACB4E /* FlatToggleButtonStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D917AB1F550D0D006ACB4E /* FlatToggleButtonStyleKit.swift */; };
 		94D917AF1F550D28006ACB4E /* FlatToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D917AE1F550D28006ACB4E /* FlatToggleButton.swift */; };
@@ -34,6 +40,7 @@
 		94F694C61F683D5D0061DA5E /* CallbackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F694C51F683D5D0061DA5E /* CallbackButton.swift */; };
 		94FEFEC91F3150D00064EC09 /* SliderTransposeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FEFEC71F3150D00064EC09 /* SliderTransposeButton.swift */; };
 		A4B6DE5FB88EB0520C4F0937 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB0076A913A8D9EB5B5A6C27 /* Pods_OneSignalNotificationServiceExtension.framework */; };
+		AF8CC7C0224815F200090F64 /* S1Sequencer.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF8CC7BE224815F200090F64 /* S1Sequencer.mm */; };
 		C432979120CB2AA00063F795 /* Presets+UITextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C432979020CB2AA00063F795 /* Presets+UITextViewDelegate.swift */; };
 		C432979320CB2BB20063F795 /* Presets+LoadSaveManipulate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C432979220CB2BB20063F795 /* Presets+LoadSaveManipulate.swift */; };
 		C432979520CB2D620063F795 /* Manager+callbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C432979420CB2D620063F795 /* Manager+callbacks.swift */; };
@@ -73,6 +80,8 @@
 		C435C58420C530C900DAECCD /* S1NoteState.mm in Sources */ = {isa = PBXBuildFile; fileRef = C435C56D20C530C900DAECCD /* S1NoteState.mm */; };
 		C435C58520C530C900DAECCD /* S1AudioUnit.mm in Sources */ = {isa = PBXBuildFile; fileRef = C435C57020C530C900DAECCD /* S1AudioUnit.mm */; };
 		C435C58920C530C900DAECCD /* S1DSPKernel.mm in Sources */ = {isa = PBXBuildFile; fileRef = C435C57620C530C900DAECCD /* S1DSPKernel.mm */; };
+		C43A13AE20FC4C7C009E2B30 /* ABLLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A13AD20FC4C7C009E2B30 /* ABLLinkManager.swift */; };
+		C45DF29C21016A0E000AB3FD /* LinkExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45DF29B21016A0E000AB3FD /* LinkExtensions.swift */; };
 		C47FB3C31F36694300EF2F01 /* RateKnob.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47FB3C21F36694300EF2F01 /* RateKnob.swift */; };
 		C4B490E720C649D900FD565A /* S1DSPKernel+destroy.mm in Sources */ = {isa = PBXBuildFile; fileRef = C4B490E520C649D900FD565A /* S1DSPKernel+destroy.mm */; };
 		C4B490E920C64AC600FD565A /* S1DSPKernel+MIDI.mm in Sources */ = {isa = PBXBuildFile; fileRef = C4B490E820C64AC600FD565A /* S1DSPKernel+MIDI.mm */; };
@@ -160,23 +169,92 @@
 		C4D193C81F1187B500FF4FE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D193C71F1187B500FF4FE4 /* AppDelegate.swift */; };
 		C4D193CD1F1187B500FF4FE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D193CB1F1187B500FF4FE4 /* Main.storyboard */; };
 		C4D193CF1F1187B500FF4FE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D193CE1F1187B500FF4FE4 /* Assets.xcassets */; };
-		C4F3B1DB20F488060072FFF4 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F3B1DA20F488060072FFF4 /* About.storyboard */; };
-		C4F3B1DE20F4882D0072FFF4 /* MailingList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F3B1DD20F4882D0072FFF4 /* MailingList.storyboard */; };
-		C4F3B1E020F4883A0072FFF4 /* Effects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F3B1DF20F4883A0072FFF4 /* Effects.storyboard */; };
-		C4F3B1E320F488490072FFF4 /* Envelopes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F3B1E220F488480072FFF4 /* Envelopes.storyboard */; };
-		C4F3B1E620F488530072FFF4 /* Generators.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F3B1E520F488530072FFF4 /* Generators.storyboard */; };
-		C4F3B1E920F4885C0072FFF4 /* Header.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F3B1E820F4885C0072FFF4 /* Header.storyboard */; };
-		C4F3B1EC20F4886E0072FFF4 /* Presets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F3B1EB20F4886E0072FFF4 /* Presets.storyboard */; };
-		C4F3B1EF20F4887E0072FFF4 /* Sequencer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F3B1EE20F4887E0072FFF4 /* Sequencer.storyboard */; };
-		C4F3B1F220F4888D0072FFF4 /* TouchPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F3B1F120F4888C0072FFF4 /* TouchPad.storyboard */; };
-		C4F3B1F520F4889D0072FFF4 /* Tunings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F3B1F420F4889D0072FFF4 /* Tunings.storyboard */; };
-		C4F3B1F820F489550072FFF4 /* Dev.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F3B1F720F489550072FFF4 /* Dev.storyboard */; };
 		C4F7ECAF1F244A4B0011B119 /* ToggleButtonStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F7ECA61F2446960011B119 /* ToggleButtonStyleKit.swift */; };
 		C4F7ECB51F244A510011B119 /* Knob+Touches.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F7ECA81F2446960011B119 /* Knob+Touches.swift */; };
 		C4F7ECB61F244A510011B119 /* Knob.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F7ECA91F2446960011B119 /* Knob.swift */; };
 		C4F7ECB71F244A510011B119 /* KnobStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F7ECAA1F2446960011B119 /* KnobStyleKit.swift */; };
 		C4F7ECB81F244A510011B119 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F7ECAB1F2446960011B119 /* ToggleButton.swift */; };
 		EA090E4420F74B0A0012A8F7 /* Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA090E4320F74B0A0012A8F7 /* Private.swift */; };
+		EA388CDE210498AC0026C0C0 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA388CE0210498AC0026C0C0 /* About.storyboard */; };
+		EA388CE1210498DD0026C0C0 /* Header.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA388CE3210498DD0026C0C0 /* Header.storyboard */; };
+		EA388CE4210498E90026C0C0 /* Effects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA388CE6210498E90026C0C0 /* Effects.storyboard */; };
+		EA388CE7210498F20026C0C0 /* Presets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA388CE9210498F20026C0C0 /* Presets.storyboard */; };
+		EA388CEA210498FD0026C0C0 /* Tunings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA388CEC210498FD0026C0C0 /* Tunings.storyboard */; };
+		EA388CED210499070026C0C0 /* TouchPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA388CEF210499070026C0C0 /* TouchPad.storyboard */; };
+		EA388CF0210499110026C0C0 /* Sequencer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA388CF2210499110026C0C0 /* Sequencer.storyboard */; };
+		EA388CF32104991C0026C0C0 /* Envelopes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA388CF52104991C0026C0C0 /* Envelopes.storyboard */; };
+		EA388CF6210499530026C0C0 /* Generators.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA388CF8210499530026C0C0 /* Generators.storyboard */; };
+		EA388CF92104995B0026C0C0 /* MailingList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA388CFB2104995B0026C0C0 /* MailingList.storyboard */; };
+		EA388CFC210548460026C0C0 /* Dev.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA388CFE210548460026C0C0 /* Dev.storyboard */; };
+		EA388D1C21071BD50026C0C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA388D1A21071BD50026C0C0 /* InfoPlist.strings */; };
+		EA388D1F21071BD50026C0C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA388D1D21071BD50026C0C0 /* Localizable.strings */; };
+		F47C27E42207C12100CA7541 /* Tunings+TuneUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47C27E32207C12100CA7541 /* Tunings+TuneUp.swift */; };
+		F47C27E62207C74000CA7541 /* TuningsPanel+TuneUpDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47C27E52207C74000CA7541 /* TuningsPanel+TuneUpDelegate.swift */; };
+		F482CC2C2123CDE70093ADC8 /* triangle_0674.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CBF62123CDE70093ADC8 /* triangle_0674.json */; };
+		F482CC2D2123CDE70093ADC8 /* bandlimitedWaveformFrequencies.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CBF72123CDE70093ADC8 /* bandlimitedWaveformFrequencies.json */; };
+		F482CC2E2123CDE70093ADC8 /* pwm_0000.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CBF82123CDE70093ADC8 /* pwm_0000.json */; };
+		F482CC2F2123CDE70093ADC8 /* square_0674.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CBF92123CDE70093ADC8 /* square_0674.json */; };
+		F482CC302123CDE70093ADC8 /* sawtooth_0002.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CBFA2123CDE70093ADC8 /* sawtooth_0002.json */; };
+		F482CC312123CDE70093ADC8 /* triangle_0005.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CBFB2123CDE70093ADC8 /* triangle_0005.json */; };
+		F482CC322123CDE70093ADC8 /* square_0005.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CBFC2123CDE70093ADC8 /* square_0005.json */; };
+		F482CC332123CDE70093ADC8 /* pwm_1348.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CBFD2123CDE70093ADC8 /* pwm_1348.json */; };
+		F482CC342123CDE70093ADC8 /* sawtooth_2696.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CBFE2123CDE70093ADC8 /* sawtooth_2696.json */; };
+		F482CC352123CDE70093ADC8 /* pwm_0021.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CBFF2123CDE70093ADC8 /* pwm_0021.json */; };
+		F482CC362123CDE70093ADC8 /* sawtooth_0042.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC002123CDE70093ADC8 /* sawtooth_0042.json */; };
+		F482CC372123CDE70093ADC8 /* square_0337.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC012123CDE70093ADC8 /* square_0337.json */; };
+		F482CC382123CDE70093ADC8 /* pwm_0001.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC022123CDE70093ADC8 /* pwm_0001.json */; };
+		F482CC392123CDE70093ADC8 /* pwm_0168.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC032123CDE70093ADC8 /* pwm_0168.json */; };
+		F482CC3A2123CDE70093ADC8 /* triangle_0337.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC042123CDE70093ADC8 /* triangle_0337.json */; };
+		F482CC3B2123CDE70093ADC8 /* triangle_0042.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC052123CDE70093ADC8 /* triangle_0042.json */; };
+		F482CC3C2123CDE70093ADC8 /* square_2696.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC062123CDE70093ADC8 /* square_2696.json */; };
+		F482CC3D2123CDE70093ADC8 /* triangle_2696.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC072123CDE70093ADC8 /* triangle_2696.json */; };
+		F482CC3E2123CDE70093ADC8 /* square_0042.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC082123CDE70093ADC8 /* square_0042.json */; };
+		F482CC3F2123CDE70093ADC8 /* pwm_0084.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC092123CDE70093ADC8 /* pwm_0084.json */; };
+		F482CC402123CDE70093ADC8 /* sawtooth_0337.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC0A2123CDE70093ADC8 /* sawtooth_0337.json */; };
+		F482CC412123CDE70093ADC8 /* pwm_0010.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC0B2123CDE70093ADC8 /* pwm_0010.json */; };
+		F482CC422123CDE70093ADC8 /* sawtooth_0674.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC0C2123CDE70093ADC8 /* sawtooth_0674.json */; };
+		F482CC432123CDE70093ADC8 /* square_0002.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC0D2123CDE70093ADC8 /* square_0002.json */; };
+		F482CC442123CDE70093ADC8 /* triangle_0002.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC0E2123CDE70093ADC8 /* triangle_0002.json */; };
+		F482CC452123CDE70093ADC8 /* sawtooth_0005.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC0F2123CDE70093ADC8 /* sawtooth_0005.json */; };
+		F482CC462123CDE70093ADC8 /* pwm_0337.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC102123CDE70093ADC8 /* pwm_0337.json */; };
+		F482CC472123CDE70093ADC8 /* square_0001.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC112123CDE70093ADC8 /* square_0001.json */; };
+		F482CC482123CDE70093ADC8 /* triangle_0168.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC122123CDE70093ADC8 /* triangle_0168.json */; };
+		F482CC492123CDE70093ADC8 /* sawtooth_0084.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC132123CDE70093ADC8 /* sawtooth_0084.json */; };
+		F482CC4A2123CDE70093ADC8 /* sawtooth_0010.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC142123CDE70093ADC8 /* sawtooth_0010.json */; };
+		F482CC4B2123CDE70093ADC8 /* square_0168.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC152123CDE70093ADC8 /* square_0168.json */; };
+		F482CC4C2123CDE70093ADC8 /* triangle_0001.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC162123CDE70093ADC8 /* triangle_0001.json */; };
+		F482CC4D2123CDE70093ADC8 /* bandlimitedWaveforms.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC172123CDE70093ADC8 /* bandlimitedWaveforms.json */; };
+		F482CC4E2123CDE70093ADC8 /* square_1348.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC182123CDE70093ADC8 /* square_1348.json */; };
+		F482CC4F2123CDE70093ADC8 /* triangle_0021.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC192123CDE70093ADC8 /* triangle_0021.json */; };
+		F482CC502123CDE70093ADC8 /* square_0021.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC1A2123CDE70093ADC8 /* square_0021.json */; };
+		F482CC512123CDE70093ADC8 /* triangle_1348.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC1B2123CDE70093ADC8 /* triangle_1348.json */; };
+		F482CC522123CDE70093ADC8 /* pwm_0005.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC1C2123CDE70093ADC8 /* pwm_0005.json */; };
+		F482CC532123CDE70093ADC8 /* triangle_0000.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC1D2123CDE70093ADC8 /* triangle_0000.json */; };
+		F482CC542123CDE70093ADC8 /* square_0000.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC1E2123CDE70093ADC8 /* square_0000.json */; };
+		F482CC552123CDE70093ADC8 /* pwm_0674.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC1F2123CDE70093ADC8 /* pwm_0674.json */; };
+		F482CC562123CDE70093ADC8 /* pwm_0002.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC202123CDE70093ADC8 /* pwm_0002.json */; };
+		F482CC572123CDE70093ADC8 /* sawtooth_0000.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC212123CDE70093ADC8 /* sawtooth_0000.json */; };
+		F482CC582123CDE70093ADC8 /* sawtooth_0001.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC222123CDE70093ADC8 /* sawtooth_0001.json */; };
+		F482CC592123CDE70093ADC8 /* square_0084.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC232123CDE70093ADC8 /* square_0084.json */; };
+		F482CC5A2123CDE70093ADC8 /* triangle_0010.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC242123CDE70093ADC8 /* triangle_0010.json */; };
+		F482CC5B2123CDE70093ADC8 /* sawtooth_0168.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC252123CDE70093ADC8 /* sawtooth_0168.json */; };
+		F482CC5C2123CDE70093ADC8 /* square_0010.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC262123CDE70093ADC8 /* square_0010.json */; };
+		F482CC5D2123CDE70093ADC8 /* triangle_0084.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC272123CDE70093ADC8 /* triangle_0084.json */; };
+		F482CC5E2123CDE70093ADC8 /* pwm_2696.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC282123CDE70093ADC8 /* pwm_2696.json */; };
+		F482CC5F2123CDE70093ADC8 /* sawtooth_1348.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC292123CDE70093ADC8 /* sawtooth_1348.json */; };
+		F482CC602123CDE70093ADC8 /* sawtooth_0021.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC2A2123CDE70093ADC8 /* sawtooth_0021.json */; };
+		F482CC612123CDE70093ADC8 /* pwm_0042.json in Resources */ = {isa = PBXBuildFile; fileRef = F482CC2B2123CDE70093ADC8 /* pwm_0042.json */; };
+		F4AD9EE022484EFA002B0E2E /* MIDIArpDirectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AD9EDF22484EFA002B0E2E /* MIDIArpDirectionButton.swift */; };
+		F4AD9EE2224856C2002B0E2E /* MIDIToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AD9EE1224856C2002B0E2E /* MIDIToggleButton.swift */; };
+		F4AD9EE4224866BE002B0E2E /* MIDIToggleSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AD9EE3224866BE002B0E2E /* MIDIToggleSwitch.swift */; };
+		F4B1AD65228BDCEC009FA6BA /* S1TuningTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1AD64228BDCEC009FA6BA /* S1TuningTable.swift */; };
+		F4C790142247025C003CFF28 /* MIDIStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C790132247025C003CFF28 /* MIDIStepper.swift */; };
+		F4C9D9A321D6B13200B7C4E5 /* Tunings+UpgradePaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C9D9A221D6B13200B7C4E5 /* Tunings+UpgradePaths.swift */; };
+		F4CA406D224EB2A70053F29E /* S1Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA406C224EB2A70053F29E /* S1Control.swift */; };
+		F4CA406F225192A60053F29E /* MIDISynthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA406E225192A60053F29E /* MIDISynthButton.swift */; };
+		F4E4D00421C5B9F2005B2FAF /* TuningBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E4D00321C5B9F2005B2FAF /* TuningBank.swift */; };
+		F4E4D00721C81E34005B2FAF /* tunings_v0_upgrade_path_test.json in Resources */ = {isa = PBXBuildFile; fileRef = F4E4D00521C81DB4005B2FAF /* tunings_v0_upgrade_path_test.json */; };
+		F4E4D00921C87B9F005B2FAF /* Tunings+DefaultTunings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E4D00821C87B9F005B2FAF /* Tunings+DefaultTunings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,18 +286,49 @@
 		45E1A7C3C54D27427C4A71B1 /* Pods_AKS1Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AKS1Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EC225D22B5EE94B01AA474 /* Pods-AudioKitSynthOne.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioKitSynthOne.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AudioKitSynthOne/Pods-AudioKitSynthOne.debug.xcconfig"; sourceTree = "<group>"; };
 		5FAA47B316A5F659F440DAC9 /* Pods-AKS1Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AKS1Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AKS1Extension/Pods-AKS1Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		69E4E45622381DF90049F0EA /* S1DSPCompressor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = S1DSPCompressor.hpp; sourceTree = "<group>"; };
 		90231BFB16779C7C2CD6CB3F /* Pods-AKS1Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AKS1Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-AKS1Extension/Pods-AKS1Extension.release.xcconfig"; sourceTree = "<group>"; };
+		9405503A210556C20039F101 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		9405503B210556C80039F101 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/About.strings; sourceTree = "<group>"; };
+		9405503C210556F20039F101 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Effects.strings; sourceTree = "<group>"; };
+		9405503D210556FA0039F101 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Envelopes.strings; sourceTree = "<group>"; };
+		9405503E210557040039F101 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Generators.strings; sourceTree = "<group>"; };
+		9405503F2105570F0039F101 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Header.strings; sourceTree = "<group>"; };
+		94055040210557470039F101 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Presets.strings; sourceTree = "<group>"; };
+		940550412105574F0039F101 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Sequencer.strings; sourceTree = "<group>"; };
+		94055042210557580039F101 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TouchPad.strings; sourceTree = "<group>"; };
+		94055043210557600039F101 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Tunings.strings; sourceTree = "<group>"; };
 		941645CA20B3597300D62851 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		941645CC20B3597300D62851 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		941645CE20B3597300D62851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		941752B920E2BD2E0076D953 /* Starter Bank.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Starter Bank.json"; sourceTree = "<group>"; };
+		94189CB7219F27130004C28B /* MoreAppsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreAppsController.swift; sourceTree = "<group>"; };
+		9441B83D2126618C003A5163 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Presets.strings; sourceTree = "<group>"; };
+		9441B83E2126618C003A5163 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9441B83F2126618C003A5163 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9441B8402126618C003A5163 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		9441B8412126618D003A5163 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/About.strings; sourceTree = "<group>"; };
+		9441B8422126618D003A5163 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MailingList.strings; sourceTree = "<group>"; };
+		9441B8432126618D003A5163 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Dev.strings; sourceTree = "<group>"; };
+		9441B8442126618D003A5163 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Effects.strings; sourceTree = "<group>"; };
+		9441B8452126618D003A5163 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Envelopes.strings; sourceTree = "<group>"; };
+		9441B8462126618D003A5163 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Generators.strings; sourceTree = "<group>"; };
+		9441B8472126618D003A5163 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Header.strings; sourceTree = "<group>"; };
+		9441B8482126618D003A5163 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Sequencer.strings; sourceTree = "<group>"; };
+		9441B8492126618D003A5163 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/TouchPad.strings; sourceTree = "<group>"; };
+		9441B84A2126618D003A5163 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Tunings.strings; sourceTree = "<group>"; };
+		9441B84B2126618D003A5163 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Dev.strings; sourceTree = "<group>"; };
+		9441B84C2126618E003A5163 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		945C3A0E1F31428B0086D58B /* VerticalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSlider.swift; sourceTree = "<group>"; };
 		94656AEC205F410900634B2C /* KeyboardShowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardShowButton.swift; sourceTree = "<group>"; };
+		946980562169258A007EAA5B /* String+CapitalizeFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+CapitalizeFirst.swift"; sourceTree = "<group>"; };
 		94780FEF1F9B0108006D3710 /* AudioKitSynthOne.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AudioKitSynthOne.entitlements; sourceTree = "<group>"; };
 		947956A51F329AB100FE5D9B /* StepperStyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperStyleKit.swift; sourceTree = "<group>"; };
 		947956A81F329AB100FE5D9B /* Stepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stepper.swift; sourceTree = "<group>"; };
 		947956B21F32A70300FE5D9B /* ToggleSwitchStyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleSwitchStyleKit.swift; sourceTree = "<group>"; };
 		947956B51F32A72400FE5D9B /* ToggleSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleSwitch.swift; sourceTree = "<group>"; };
+		9479F20221E4F9CE003605B9 /* iPhoneToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhoneToggleButton.swift; sourceTree = "<group>"; };
+		9479F20421E4FB05003605B9 /* TopUIButtonStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopUIButtonStyleKit.swift; path = AudioKitSynthOne/Controls/Buttons/TopUIButtonStyleKit.swift; sourceTree = SOURCE_ROOT; };
 		948C54C21F3A57C600DA6081 /* SynthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthButton.swift; sourceTree = "<group>"; };
 		948D33A81F4DFC08006E8276 /* FilterTypeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTypeButton.swift; sourceTree = "<group>"; };
 		94985FF220D8899300D71239 /* Electronisounds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Electronisounds.json; sourceTree = "<group>"; };
@@ -229,6 +338,8 @@
 		94A5039C1FF2F6E30097D37C /* ChannelStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelStepper.swift; sourceTree = "<group>"; };
 		94A6F30B1F687F3E007B083C /* icon_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_64.png; sourceTree = "<group>"; };
 		94A6F30C1F687F3E007B083C /* icon_320.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_320.png; sourceTree = "<group>"; };
+		94AA87952216293F005BE569 /* TuneUpPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TuneUpPopUp.swift; path = AudioKitSynthOne/Tunings/TuneUpPopUp.swift; sourceTree = SOURCE_ROOT; };
+		94D2AF2621EE57AA006E2312 /* Francis Preve.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Francis Preve.json"; sourceTree = "<group>"; };
 		94D37DD320E06641002008A4 /* Sound of Izrael.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Sound of Izrael.json"; sourceTree = "<group>"; };
 		94D917AB1F550D0D006ACB4E /* FlatToggleButtonStyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatToggleButtonStyleKit.swift; sourceTree = "<group>"; };
 		94D917AE1F550D28006ACB4E /* FlatToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatToggleButton.swift; sourceTree = "<group>"; };
@@ -236,8 +347,45 @@
 		94DB18D11F37D879008368AE /* NavButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavButton.swift; sourceTree = "<group>"; };
 		94DB3FDF1FC8C0EA007F8081 /* PresetUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetUIButton.swift; sourceTree = "<group>"; };
 		94E951341F3644E5009A8B00 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
+		94F53E4F212F0C4D0012C0DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		94F53E50212F0C4D0012C0DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/About.strings"; sourceTree = "<group>"; };
+		94F53E51212F0C4D0012C0DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/MailingList.strings"; sourceTree = "<group>"; };
+		94F53E52212F0C4D0012C0DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Dev.strings"; sourceTree = "<group>"; };
+		94F53E53212F0C4D0012C0DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Effects.strings"; sourceTree = "<group>"; };
+		94F53E54212F0C4D0012C0DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Envelopes.strings"; sourceTree = "<group>"; };
+		94F53E55212F0C4D0012C0DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Generators.strings"; sourceTree = "<group>"; };
+		94F53E56212F0C4D0012C0DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Header.strings"; sourceTree = "<group>"; };
+		94F53E57212F0C4D0012C0DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Presets.strings"; sourceTree = "<group>"; };
+		94F53E58212F0C4D0012C0DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Sequencer.strings"; sourceTree = "<group>"; };
+		94F53E59212F0C4D0012C0DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/TouchPad.strings"; sourceTree = "<group>"; };
+		94F53E5A212F0C4D0012C0DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Tunings.strings"; sourceTree = "<group>"; };
+		94F53E5B212F0C4E0012C0DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Dev.strings"; sourceTree = "<group>"; };
+		94F53E5C212F0C4E0012C0DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		94F53E5D212F0C4E0012C0DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		94F53E5E212F0C4E0012C0DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		94F53E7D212F11620012C0DE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		94F53E7E212F11620012C0DE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/About.strings"; sourceTree = "<group>"; };
+		94F53E7F212F11620012C0DE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MailingList.strings"; sourceTree = "<group>"; };
+		94F53E80212F11620012C0DE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Dev.strings"; sourceTree = "<group>"; };
+		94F53E81212F11620012C0DE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Effects.strings"; sourceTree = "<group>"; };
+		94F53E82212F11620012C0DE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Envelopes.strings"; sourceTree = "<group>"; };
+		94F53E83212F11620012C0DE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Generators.strings"; sourceTree = "<group>"; };
+		94F53E84212F11630012C0DE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Header.strings"; sourceTree = "<group>"; };
+		94F53E85212F11630012C0DE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Presets.strings"; sourceTree = "<group>"; };
+		94F53E86212F11630012C0DE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Sequencer.strings"; sourceTree = "<group>"; };
+		94F53E87212F11630012C0DE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TouchPad.strings"; sourceTree = "<group>"; };
+		94F53E88212F11630012C0DE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Tunings.strings"; sourceTree = "<group>"; };
+		94F53E89212F11790012C0DE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		94F53E8A212F11790012C0DE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		94F53E8B212F11790012C0DE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		94F53E8C212F11A90012C0DE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "AudioKitSynthOne/Developer/zh-Hans.lproj/zh-Hans.lproj/Dev.strings"; sourceTree = SOURCE_ROOT; };
 		94F694C51F683D5D0061DA5E /* CallbackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackButton.swift; sourceTree = "<group>"; };
 		94FEFEC71F3150D00064EC09 /* SliderTransposeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTransposeButton.swift; sourceTree = "<group>"; };
+		AF8CC7BB224815F100090F64 /* S1Sequencer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = S1Sequencer.hpp; sourceTree = "<group>"; };
+		AF8CC7BC224815F100090F64 /* S1Arpeggiator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = S1Arpeggiator.hpp; sourceTree = "<group>"; };
+		AF8CC7BD224815F200090F64 /* S1ArpModes.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = S1ArpModes.hpp; sourceTree = "<group>"; };
+		AF8CC7BE224815F200090F64 /* S1Sequencer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = S1Sequencer.mm; sourceTree = "<group>"; };
+		AF8CC7BF224815F200090F64 /* S1SeqNoteNumber.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = S1SeqNoteNumber.hpp; sourceTree = "<group>"; };
 		BA27CDAC229BF66A1C649B42 /* Pods_AudioKitSynthOne.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudioKitSynthOne.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C40CBA2620CDE2B000A8245F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C40CBA2720CDE72500A8245F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -302,6 +450,12 @@
 		C435C57720C530C900DAECCD /* S1DSPKernel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = S1DSPKernel.hpp; sourceTree = "<group>"; };
 		C435C58C20C5336600DAECCD /* S1Rate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = S1Rate.hpp; sourceTree = "<group>"; };
 		C435C58D20C5336600DAECCD /* AKSynthOneRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKSynthOneRate.h; sourceTree = "<group>"; };
+		C43A13AD20FC4C7C009E2B30 /* ABLLinkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABLLinkManager.swift; sourceTree = "<group>"; };
+		C45DF29B21016A0E000AB3FD /* LinkExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkExtensions.swift; sourceTree = "<group>"; };
+		C45DF2A2210176AB000AB3FD /* libABLLink.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libABLLink.a; sourceTree = "<group>"; };
+		C45DF2A4210176AB000AB3FD /* ABLLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABLLink.h; sourceTree = "<group>"; };
+		C45DF2A5210176AB000AB3FD /* ABLLinkUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABLLinkUtils.h; sourceTree = "<group>"; };
+		C45DF2A6210176AB000AB3FD /* ABLLinkSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABLLinkSettingsViewController.h; sourceTree = "<group>"; };
 		C47FB3C21F36694300EF2F01 /* RateKnob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateKnob.swift; sourceTree = "<group>"; };
 		C4B490E520C649D900FD565A /* S1DSPKernel+destroy.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "S1DSPKernel+destroy.mm"; sourceTree = "<group>"; };
 		C4B490E820C64AC600FD565A /* S1DSPKernel+MIDI.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "S1DSPKernel+MIDI.mm"; sourceTree = "<group>"; };
@@ -391,17 +545,6 @@
 		C4D193CC1F1187B500FF4FE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4D193CE1F1187B500FF4FE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4D193D31F1187B500FF4FE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4F3B1DA20F488060072FFF4 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
-		C4F3B1DD20F4882D0072FFF4 /* MailingList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MailingList.storyboard; sourceTree = "<group>"; };
-		C4F3B1DF20F4883A0072FFF4 /* Effects.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Effects.storyboard; sourceTree = "<group>"; };
-		C4F3B1E220F488480072FFF4 /* Envelopes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Envelopes.storyboard; sourceTree = "<group>"; };
-		C4F3B1E520F488530072FFF4 /* Generators.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Generators.storyboard; sourceTree = "<group>"; };
-		C4F3B1E820F4885C0072FFF4 /* Header.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Header.storyboard; sourceTree = "<group>"; };
-		C4F3B1EB20F4886E0072FFF4 /* Presets.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Presets.storyboard; sourceTree = "<group>"; };
-		C4F3B1EE20F4887E0072FFF4 /* Sequencer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sequencer.storyboard; sourceTree = "<group>"; };
-		C4F3B1F120F4888C0072FFF4 /* TouchPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TouchPad.storyboard; sourceTree = "<group>"; };
-		C4F3B1F420F4889D0072FFF4 /* Tunings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tunings.storyboard; sourceTree = "<group>"; };
-		C4F3B1F720F489550072FFF4 /* Dev.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dev.storyboard; sourceTree = "<group>"; };
 		C4F7ECA61F2446960011B119 /* ToggleButtonStyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButtonStyleKit.swift; sourceTree = "<group>"; };
 		C4F7ECA81F2446960011B119 /* Knob+Touches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Knob+Touches.swift"; sourceTree = "<group>"; };
 		C4F7ECA91F2446960011B119 /* Knob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Knob.swift; sourceTree = "<group>"; };
@@ -411,8 +554,142 @@
 		D96BC33C5D07149EC2FAB8CE /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		E2883EE9358887836A57FE08 /* Pods-AudioKitSynthOne.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioKitSynthOne.release.xcconfig"; path = "Pods/Target Support Files/Pods-AudioKitSynthOne/Pods-AudioKitSynthOne.release.xcconfig"; sourceTree = "<group>"; };
 		EA090E4320F74B0A0012A8F7 /* Private.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Private.swift; sourceTree = "<group>"; };
+		EA143DC4210A83D600543E17 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA143DC5210A83DF00543E17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA143DC6210A842E00543E17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA143DC7210A843000543E17 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA143DC8210A843500543E17 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA143DC9210A844100543E17 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA143DCA210A844400543E17 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA143DCB210A846100543E17 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		EA143DCC210A846100543E17 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/About.strings"; sourceTree = "<group>"; };
+		EA143DCD210A846100543E17 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/MailingList.strings"; sourceTree = "<group>"; };
+		EA143DCE210A846100543E17 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Dev.strings"; sourceTree = "<group>"; };
+		EA143DCF210A846100543E17 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Effects.strings"; sourceTree = "<group>"; };
+		EA143DD0210A846100543E17 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Envelopes.strings"; sourceTree = "<group>"; };
+		EA143DD1210A846100543E17 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Generators.strings"; sourceTree = "<group>"; };
+		EA143DD2210A846100543E17 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Header.strings"; sourceTree = "<group>"; };
+		EA143DD3210A846100543E17 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Presets.strings"; sourceTree = "<group>"; };
+		EA143DD4210A846100543E17 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Sequencer.strings"; sourceTree = "<group>"; };
+		EA143DD5210A846100543E17 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/TouchPad.strings"; sourceTree = "<group>"; };
+		EA143DD6210A846100543E17 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Tunings.strings"; sourceTree = "<group>"; };
+		EA143DD7210A846100543E17 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		EA143DD8210A846100543E17 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		EA143DD9210A846200543E17 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		EA143DF9210A86DC00543E17 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Dev.strings"; sourceTree = "<group>"; };
+		EA143E05210FDA3C00543E17 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = AudioKitSynthOne/Developer/fr.lproj/fr.lproj/Dev.strings; sourceTree = SOURCE_ROOT; };
+		EA143E29211289E100543E17 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = AudioKitSynthOne/Developer/tr.lproj/tr.lproj/Dev.strings; sourceTree = SOURCE_ROOT; };
+		EA2354D1210879AC0018E035 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MailingList.strings; sourceTree = "<group>"; };
+		EA2354D2210879DF0018E035 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Dev.strings; sourceTree = "<group>"; };
+		EA2354D421087C500018E035 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EA388CDF210498AC0026C0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/About.storyboard; sourceTree = "<group>"; };
+		EA388CE2210498DD0026C0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Header.storyboard; sourceTree = "<group>"; };
+		EA388CE5210498E90026C0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Effects.storyboard; sourceTree = "<group>"; };
+		EA388CE8210498F20026C0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Presets.storyboard; sourceTree = "<group>"; };
+		EA388CEB210498FD0026C0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Tunings.storyboard; sourceTree = "<group>"; };
+		EA388CEE210499070026C0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TouchPad.storyboard; sourceTree = "<group>"; };
+		EA388CF1210499110026C0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Sequencer.storyboard; sourceTree = "<group>"; };
+		EA388CF42104991C0026C0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Envelopes.storyboard; sourceTree = "<group>"; };
+		EA388CF7210499530026C0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Generators.storyboard; sourceTree = "<group>"; };
+		EA388CFA2104995B0026C0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MailingList.storyboard; sourceTree = "<group>"; };
+		EA388CFD210548460026C0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Dev.storyboard; sourceTree = "<group>"; };
+		EA388CFF2106A2D60026C0C0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		EA388D002106A2D60026C0C0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/About.strings; sourceTree = "<group>"; };
+		EA388D012106A2D60026C0C0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MailingList.strings; sourceTree = "<group>"; };
+		EA388D022106A2D60026C0C0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Dev.strings; sourceTree = "<group>"; };
+		EA388D032106A2D60026C0C0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Effects.strings; sourceTree = "<group>"; };
+		EA388D042106A2D60026C0C0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Envelopes.strings; sourceTree = "<group>"; };
+		EA388D052106A2D60026C0C0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Generators.strings; sourceTree = "<group>"; };
+		EA388D062106A2D60026C0C0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Header.strings; sourceTree = "<group>"; };
+		EA388D072106A2D70026C0C0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Presets.strings; sourceTree = "<group>"; };
+		EA388D082106A2D70026C0C0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Sequencer.strings; sourceTree = "<group>"; };
+		EA388D092106A2D70026C0C0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/TouchPad.strings; sourceTree = "<group>"; };
+		EA388D0A2106A2D70026C0C0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Tunings.strings; sourceTree = "<group>"; };
+		EA388D0B2106A2E50026C0C0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		EA388D0C2106A2E50026C0C0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/About.strings; sourceTree = "<group>"; };
+		EA388D0D2106A2E50026C0C0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/MailingList.strings; sourceTree = "<group>"; };
+		EA388D0E2106A2E50026C0C0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Dev.strings; sourceTree = "<group>"; };
+		EA388D0F2106A2E50026C0C0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Effects.strings; sourceTree = "<group>"; };
+		EA388D102106A2E50026C0C0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Envelopes.strings; sourceTree = "<group>"; };
+		EA388D112106A2E50026C0C0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Generators.strings; sourceTree = "<group>"; };
+		EA388D122106A2E50026C0C0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Header.strings; sourceTree = "<group>"; };
+		EA388D132106A2E60026C0C0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Presets.strings; sourceTree = "<group>"; };
+		EA388D142106A2E60026C0C0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Sequencer.strings; sourceTree = "<group>"; };
+		EA388D152106A2E60026C0C0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/TouchPad.strings; sourceTree = "<group>"; };
+		EA388D162106A2E60026C0C0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Tunings.strings; sourceTree = "<group>"; };
+		EA388D1821071BD50026C0C0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA388D1E21071BD50026C0C0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EA388D2221071C170026C0C0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EA388D2721071C330026C0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F437E99E20EB22D00096FEAC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F47C27E32207C12100CA7541 /* Tunings+TuneUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tunings+TuneUp.swift"; sourceTree = "<group>"; };
+		F47C27E52207C74000CA7541 /* TuningsPanel+TuneUpDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuningsPanel+TuneUpDelegate.swift"; sourceTree = "<group>"; };
+		F482CBF62123CDE70093ADC8 /* triangle_0674.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = triangle_0674.json; sourceTree = "<group>"; };
+		F482CBF72123CDE70093ADC8 /* bandlimitedWaveformFrequencies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bandlimitedWaveformFrequencies.json; sourceTree = "<group>"; };
+		F482CBF82123CDE70093ADC8 /* pwm_0000.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pwm_0000.json; sourceTree = "<group>"; };
+		F482CBF92123CDE70093ADC8 /* square_0674.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = square_0674.json; sourceTree = "<group>"; };
+		F482CBFA2123CDE70093ADC8 /* sawtooth_0002.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sawtooth_0002.json; sourceTree = "<group>"; };
+		F482CBFB2123CDE70093ADC8 /* triangle_0005.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = triangle_0005.json; sourceTree = "<group>"; };
+		F482CBFC2123CDE70093ADC8 /* square_0005.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = square_0005.json; sourceTree = "<group>"; };
+		F482CBFD2123CDE70093ADC8 /* pwm_1348.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pwm_1348.json; sourceTree = "<group>"; };
+		F482CBFE2123CDE70093ADC8 /* sawtooth_2696.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sawtooth_2696.json; sourceTree = "<group>"; };
+		F482CBFF2123CDE70093ADC8 /* pwm_0021.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pwm_0021.json; sourceTree = "<group>"; };
+		F482CC002123CDE70093ADC8 /* sawtooth_0042.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sawtooth_0042.json; sourceTree = "<group>"; };
+		F482CC012123CDE70093ADC8 /* square_0337.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = square_0337.json; sourceTree = "<group>"; };
+		F482CC022123CDE70093ADC8 /* pwm_0001.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pwm_0001.json; sourceTree = "<group>"; };
+		F482CC032123CDE70093ADC8 /* pwm_0168.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pwm_0168.json; sourceTree = "<group>"; };
+		F482CC042123CDE70093ADC8 /* triangle_0337.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = triangle_0337.json; sourceTree = "<group>"; };
+		F482CC052123CDE70093ADC8 /* triangle_0042.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = triangle_0042.json; sourceTree = "<group>"; };
+		F482CC062123CDE70093ADC8 /* square_2696.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = square_2696.json; sourceTree = "<group>"; };
+		F482CC072123CDE70093ADC8 /* triangle_2696.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = triangle_2696.json; sourceTree = "<group>"; };
+		F482CC082123CDE70093ADC8 /* square_0042.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = square_0042.json; sourceTree = "<group>"; };
+		F482CC092123CDE70093ADC8 /* pwm_0084.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pwm_0084.json; sourceTree = "<group>"; };
+		F482CC0A2123CDE70093ADC8 /* sawtooth_0337.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sawtooth_0337.json; sourceTree = "<group>"; };
+		F482CC0B2123CDE70093ADC8 /* pwm_0010.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pwm_0010.json; sourceTree = "<group>"; };
+		F482CC0C2123CDE70093ADC8 /* sawtooth_0674.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sawtooth_0674.json; sourceTree = "<group>"; };
+		F482CC0D2123CDE70093ADC8 /* square_0002.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = square_0002.json; sourceTree = "<group>"; };
+		F482CC0E2123CDE70093ADC8 /* triangle_0002.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = triangle_0002.json; sourceTree = "<group>"; };
+		F482CC0F2123CDE70093ADC8 /* sawtooth_0005.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sawtooth_0005.json; sourceTree = "<group>"; };
+		F482CC102123CDE70093ADC8 /* pwm_0337.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pwm_0337.json; sourceTree = "<group>"; };
+		F482CC112123CDE70093ADC8 /* square_0001.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = square_0001.json; sourceTree = "<group>"; };
+		F482CC122123CDE70093ADC8 /* triangle_0168.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = triangle_0168.json; sourceTree = "<group>"; };
+		F482CC132123CDE70093ADC8 /* sawtooth_0084.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sawtooth_0084.json; sourceTree = "<group>"; };
+		F482CC142123CDE70093ADC8 /* sawtooth_0010.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sawtooth_0010.json; sourceTree = "<group>"; };
+		F482CC152123CDE70093ADC8 /* square_0168.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = square_0168.json; sourceTree = "<group>"; };
+		F482CC162123CDE70093ADC8 /* triangle_0001.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = triangle_0001.json; sourceTree = "<group>"; };
+		F482CC172123CDE70093ADC8 /* bandlimitedWaveforms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bandlimitedWaveforms.json; sourceTree = "<group>"; };
+		F482CC182123CDE70093ADC8 /* square_1348.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = square_1348.json; sourceTree = "<group>"; };
+		F482CC192123CDE70093ADC8 /* triangle_0021.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = triangle_0021.json; sourceTree = "<group>"; };
+		F482CC1A2123CDE70093ADC8 /* square_0021.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = square_0021.json; sourceTree = "<group>"; };
+		F482CC1B2123CDE70093ADC8 /* triangle_1348.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = triangle_1348.json; sourceTree = "<group>"; };
+		F482CC1C2123CDE70093ADC8 /* pwm_0005.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pwm_0005.json; sourceTree = "<group>"; };
+		F482CC1D2123CDE70093ADC8 /* triangle_0000.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = triangle_0000.json; sourceTree = "<group>"; };
+		F482CC1E2123CDE70093ADC8 /* square_0000.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = square_0000.json; sourceTree = "<group>"; };
+		F482CC1F2123CDE70093ADC8 /* pwm_0674.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pwm_0674.json; sourceTree = "<group>"; };
+		F482CC202123CDE70093ADC8 /* pwm_0002.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pwm_0002.json; sourceTree = "<group>"; };
+		F482CC212123CDE70093ADC8 /* sawtooth_0000.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sawtooth_0000.json; sourceTree = "<group>"; };
+		F482CC222123CDE70093ADC8 /* sawtooth_0001.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sawtooth_0001.json; sourceTree = "<group>"; };
+		F482CC232123CDE70093ADC8 /* square_0084.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = square_0084.json; sourceTree = "<group>"; };
+		F482CC242123CDE70093ADC8 /* triangle_0010.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = triangle_0010.json; sourceTree = "<group>"; };
+		F482CC252123CDE70093ADC8 /* sawtooth_0168.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sawtooth_0168.json; sourceTree = "<group>"; };
+		F482CC262123CDE70093ADC8 /* square_0010.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = square_0010.json; sourceTree = "<group>"; };
+		F482CC272123CDE70093ADC8 /* triangle_0084.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = triangle_0084.json; sourceTree = "<group>"; };
+		F482CC282123CDE70093ADC8 /* pwm_2696.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pwm_2696.json; sourceTree = "<group>"; };
+		F482CC292123CDE70093ADC8 /* sawtooth_1348.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sawtooth_1348.json; sourceTree = "<group>"; };
+		F482CC2A2123CDE70093ADC8 /* sawtooth_0021.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sawtooth_0021.json; sourceTree = "<group>"; };
+		F482CC2B2123CDE70093ADC8 /* pwm_0042.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pwm_0042.json; sourceTree = "<group>"; };
+		F4AD9EDF22484EFA002B0E2E /* MIDIArpDirectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIArpDirectionButton.swift; sourceTree = "<group>"; };
+		F4AD9EE1224856C2002B0E2E /* MIDIToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIToggleButton.swift; sourceTree = "<group>"; };
+		F4AD9EE3224866BE002B0E2E /* MIDIToggleSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIToggleSwitch.swift; sourceTree = "<group>"; };
+		F4B1AD64228BDCEC009FA6BA /* S1TuningTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S1TuningTable.swift; sourceTree = "<group>"; };
+		F4C790132247025C003CFF28 /* MIDIStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIStepper.swift; sourceTree = "<group>"; };
+		F4C9D9A221D6B13200B7C4E5 /* Tunings+UpgradePaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tunings+UpgradePaths.swift"; sourceTree = "<group>"; };
+		F4CA406C224EB2A70053F29E /* S1Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S1Control.swift; sourceTree = "<group>"; };
+		F4CA406E225192A60053F29E /* MIDISynthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDISynthButton.swift; sourceTree = "<group>"; };
 		F4CB749120EEE0AF00716B92 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F4E4D00321C5B9F2005B2FAF /* TuningBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuningBank.swift; sourceTree = "<group>"; };
+		F4E4D00521C81DB4005B2FAF /* tunings_v0_upgrade_path_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tunings_v0_upgrade_path_test.json; sourceTree = "<group>"; };
+		F4E4D00821C87B9F005B2FAF /* Tunings+DefaultTunings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tunings+DefaultTunings.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -454,6 +731,7 @@
 			children = (
 				941645CC20B3597300D62851 /* NotificationService.swift */,
 				941645CE20B3597300D62851 /* Info.plist */,
+				EA388D1721071BD50026C0C0 /* InfoPlist.strings */,
 			);
 			path = OneSignalNotificationServiceExtension;
 			sourceTree = "<group>";
@@ -477,6 +755,7 @@
 				C4F7ECA61F2446960011B119 /* ToggleButtonStyleKit.swift */,
 				947956B51F32A72400FE5D9B /* ToggleSwitch.swift */,
 				947956B21F32A70300FE5D9B /* ToggleSwitchStyleKit.swift */,
+				9479F20221E4F9CE003605B9 /* iPhoneToggleButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -511,13 +790,26 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		AF8CC7BA224815A600090F64 /* Sequencer */ = {
+			isa = PBXGroup;
+			children = (
+				AF8CC7BC224815F100090F64 /* S1Arpeggiator.hpp */,
+				AF8CC7BD224815F200090F64 /* S1ArpModes.hpp */,
+				AF8CC7BF224815F200090F64 /* S1SeqNoteNumber.hpp */,
+				AF8CC7BB224815F100090F64 /* S1Sequencer.hpp */,
+				AF8CC7BE224815F200090F64 /* S1Sequencer.mm */,
+			);
+			path = Sequencer;
+			sourceTree = "<group>";
+		};
 		C432978720C896250063F795 /* About */ = {
 			isa = PBXGroup;
 			children = (
-				C4F3B1DA20F488060072FFF4 /* About.storyboard */,
+				EA388CE0210498AC0026C0C0 /* About.storyboard */,
 				C4B4916220C7C72900FD565A /* AboutViewController.swift */,
 				C4B4916120C7C72900FD565A /* InfoViewController.swift */,
 				C4B4919520C7C81200FD565A /* Mailing List */,
+				94189CB7219F27130004C28B /* MoreAppsController.swift */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -563,6 +855,7 @@
 				C435C4F420C5234900DAECCD /* CategoryCell.swift */,
 				C435C4F720C5234900DAECCD /* PresetCell.swift */,
 				94DB3FDF1FC8C0EA007F8081 /* PresetUIButton.swift */,
+				946980562169258A007EAA5B /* String+CapitalizeFirst.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -582,6 +875,7 @@
 			isa = PBXGroup;
 			children = (
 				C4B491AB20C7D10200FD565A /* LFOWavePicker.swift */,
+				C4B491C120C7DF2A00FD565A /* LFOPickerStyleKit.swift */,
 				949D93B61F2C188B007E657B /* LFOButtonStyleKit.swift */,
 				949D93B51F2C188B007E657B /* LFOToggle.swift */,
 			);
@@ -608,7 +902,7 @@
 				C435C51C20C52D1700DAECCD /* Preset.swift */,
 				C435C51320C52D1700DAECCD /* PresetDataManager.swift */,
 				C4B4919220C7C7C500FD565A /* PresetEditorViewController.swift */,
-				C4F3B1EB20F4886E0072FFF4 /* Presets.storyboard */,
+				EA388CE9210498F20026C0C0 /* Presets.storyboard */,
 				C4B4919120C7C7C500FD565A /* PresetsCategoriesViewController.swift */,
 				C435C51520C52D1700DAECCD /* Data */,
 				C4B4917C20C7C79C00FD565A /* PresetsViewController */,
@@ -625,6 +919,7 @@
 				C435C51820C52D1700DAECCD /* Bonus.json */,
 				C435C51720C52D1700DAECCD /* DJ Puzzle.json */,
 				94985FF220D8899300D71239 /* Electronisounds.json */,
+				94D2AF2621EE57AA006E2312 /* Francis Preve.json */,
 				94985FF420D8908500D71239 /* JEC.json */,
 				C435C51A20C52D1700DAECCD /* Red Sky Lullaby.json */,
 				94D37DD320E06641002008A4 /* Sound of Izrael.json */,
@@ -638,13 +933,18 @@
 			isa = PBXGroup;
 			children = (
 				94A5039C1FF2F6E30097D37C /* ChannelStepper.swift */,
+				C4B4914C20C7C6FC00FD565A /* Manager+MIDIListener.swift */,
+				C4B4914E20C7C6FC00FD565A /* Manager+MIDISettingsPopOverDelegate.swift */,
+				F4AD9EDF22484EFA002B0E2E /* MIDIArpDirectionButton.swift */,
 				C435C4F520C5234900DAECCD /* MIDICell.swift */,
 				C435C52720C52D2E00DAECCD /* MIDIInput.swift */,
 				C4B491B020C7D11500FD565A /* MIDIKnob.swift */,
 				C435C52820C52D2E00DAECCD /* MIDILearnable.swift */,
 				C4B4914D20C7C6FC00FD565A /* MIDISettingsViewController.swift */,
-				C4B4914C20C7C6FC00FD565A /* Manager+MIDIListener.swift */,
-				C4B4914E20C7C6FC00FD565A /* Manager+MIDISettingsPopOverDelegate.swift */,
+				F4C790132247025C003CFF28 /* MIDIStepper.swift */,
+				F4CA406E225192A60053F29E /* MIDISynthButton.swift */,
+				F4AD9EE1224856C2002B0E2E /* MIDIToggleButton.swift */,
+				F4AD9EE3224866BE002B0E2E /* MIDIToggleSwitch.swift */,
 			);
 			path = MIDI;
 			sourceTree = "<group>";
@@ -652,11 +952,9 @@
 		C435C52B20C52D4B00DAECCD /* Tunings */ = {
 			isa = PBXGroup;
 			children = (
-				C435C52C20C52D4B00DAECCD /* Tuning.swift */,
-				C4F3B1F420F4889D0072FFF4 /* Tunings.storyboard */,
-				C435C52E20C52D4B00DAECCD /* Tunings.swift */,
-				C435C52F20C52D4B00DAECCD /* Tunings+Harmonic.swift */,
-				C435C52D20C52D4B00DAECCD /* Tunings+Math.swift */,
+				F4E4D00A21C87CC7005B2FAF /* Model */,
+				EA388CEC210498FD0026C0C0 /* Tunings.storyboard */,
+				94AA87952216293F005BE569 /* TuneUpPopUp.swift */,
 				C4B4915320C7C70D00FD565A /* TuningsPanelController */,
 				C432978A20C902290063F795 /* UI Components */,
 				C40CBA2A20CDEBDF00A8245F /* README.md */,
@@ -667,11 +965,15 @@
 		C435C55020C530C900DAECCD /* DSP */ = {
 			isa = PBXGroup;
 			children = (
+				AF8CC7BA224815A600090F64 /* Sequencer */,
 				F437E99E20EB22D00096FEAC /* README.md */,
 				C435C55420C530C900DAECCD /* AKSynthOne.swift */,
 				C435C55120C530C900DAECCD /* Conductor.swift */,
+				F4B1AD64228BDCEC009FA6BA /* S1TuningTable.swift */,
+				F4CA406C224EB2A70053F29E /* S1Control.swift */,
 				C435C55320C530C900DAECCD /* S1Parameter.h */,
 				C435C55620C530C900DAECCD /* SDSustainer.swift */,
+				F482CBF52123CDE70093ADC8 /* BandlimitedWavetables */,
 				C435C56E20C530C900DAECCD /* Audio Unit */,
 				C435C57520C530C900DAECCD /* Kernel */,
 				C435C56B20C530C900DAECCD /* Note State */,
@@ -727,6 +1029,7 @@
 		C435C57520C530C900DAECCD /* Kernel */ = {
 			isa = PBXGroup;
 			children = (
+				69E4E45622381DF90049F0EA /* S1DSPCompressor.hpp */,
 				C435C57720C530C900DAECCD /* S1DSPKernel.hpp */,
 				C435C57620C530C900DAECCD /* S1DSPKernel.mm */,
 				C4B490E520C649D900FD565A /* S1DSPKernel+destroy.mm */,
@@ -754,11 +1057,40 @@
 			path = Rate;
 			sourceTree = "<group>";
 		};
+		C43A13AC20FC4B3A009E2B30 /* Link */ = {
+			isa = PBXGroup;
+			children = (
+				C43A13AD20FC4C7C009E2B30 /* ABLLinkManager.swift */,
+				C45DF29B21016A0E000AB3FD /* LinkExtensions.swift */,
+				C45DF2A3210176AB000AB3FD /* include */,
+				C45DF2A1210176AB000AB3FD /* lib */,
+			);
+			path = Link;
+			sourceTree = "<group>";
+		};
+		C45DF2A1210176AB000AB3FD /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				C45DF2A2210176AB000AB3FD /* libABLLink.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		C45DF2A3210176AB000AB3FD /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C45DF2A4210176AB000AB3FD /* ABLLink.h */,
+				C45DF2A5210176AB000AB3FD /* ABLLinkUtils.h */,
+				C45DF2A6210176AB000AB3FD /* ABLLinkSettingsViewController.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 		C4B490FF20C7C5C500FD565A /* Sequencer */ = {
 			isa = PBXGroup;
 			children = (
 				94E951341F3644E5009A8B00 /* Rate.swift */,
-				C4F3B1EE20F4887E0072FFF4 /* Sequencer.storyboard */,
+				EA388CF2210499110026C0C0 /* Sequencer.storyboard */,
 				C4B4910420C7C5C500FD565A /* SequencerPanelController.swift */,
 				C432978820C900390063F795 /* UI Components */,
 				C40CBA2C20CDEC1E00A8245F /* README.md */,
@@ -790,7 +1122,7 @@
 		C4B4913520C7C69D00FD565A /* TouchPad */ = {
 			isa = PBXGroup;
 			children = (
-				C4F3B1F120F4888C0072FFF4 /* TouchPad.storyboard */,
+				EA388CEF210499070026C0C0 /* TouchPad.storyboard */,
 				C4B4913920C7C69D00FD565A /* TouchPadPanelController.swift */,
 				C432978920C901530063F795 /* UI Components */,
 				C40CBA2B20CDEC0000A8245F /* README.md */,
@@ -813,6 +1145,7 @@
 			isa = PBXGroup;
 			children = (
 				C4B4915720C7C70D00FD565A /* TuningsPanelController.swift */,
+				F47C27E52207C74000CA7541 /* TuningsPanel+TuneUpDelegate.swift */,
 				C4B4915620C7C70D00FD565A /* TuningsPanel+UITableViewDataSource.swift */,
 				C4B4915520C7C70D00FD565A /* TuningsPanel+UITableViewDelegate.swift */,
 			);
@@ -848,7 +1181,7 @@
 			isa = PBXGroup;
 			children = (
 				F4CB749120EEE0AF00716B92 /* README.md */,
-				C4F3B1F720F489550072FFF4 /* Dev.storyboard */,
+				EA388CFE210548460026C0C0 /* Dev.storyboard */,
 				C4B4917220C7C73A00FD565A /* DevViewController.swift */,
 				C4B4917120C7C73A00FD565A /* Manager+DevView.swift */,
 			);
@@ -858,7 +1191,7 @@
 		C4B4917520C7C75500FD565A /* Header */ = {
 			isa = PBXGroup;
 			children = (
-				C4F3B1E820F4885C0072FFF4 /* Header.storyboard */,
+				EA388CE3210498DD0026C0C0 /* Header.storyboard */,
 				C4B4917720C7C75500FD565A /* HeaderNavButton.swift */,
 				C4B4917820C7C75500FD565A /* HeaderViewContoller.swift */,
 				C4B4917620C7C75500FD565A /* Manager+HeaderDelegate.swift */,
@@ -886,7 +1219,7 @@
 		C4B4919520C7C81200FD565A /* Mailing List */ = {
 			isa = PBXGroup;
 			children = (
-				C4F3B1DD20F4882D0072FFF4 /* MailingList.storyboard */,
+				EA388CFB2104995B0026C0C0 /* MailingList.storyboard */,
 				C4B4919620C7C81200FD565A /* Manager+MailingListDelegate.swift */,
 				C4B4919720C7C81200FD565A /* MailingListViewController.swift */,
 			);
@@ -896,7 +1229,7 @@
 		C4B4919F20C7C91900FD565A /* Envelopes */ = {
 			isa = PBXGroup;
 			children = (
-				C4F3B1E220F488480072FFF4 /* Envelopes.storyboard */,
+				EA388CF52104991C0026C0C0 /* Envelopes.storyboard */,
 				C4B491A020C7C91900FD565A /* EnvelopesPanelController.swift */,
 				C40CBA2D20CDEC4800A8245F /* README.md */,
 			);
@@ -906,7 +1239,7 @@
 		C4B491A220C7C94E00FD565A /* Effects */ = {
 			isa = PBXGroup;
 			children = (
-				C4F3B1DF20F4883A0072FFF4 /* Effects.storyboard */,
+				EA388CE6210498E90026C0C0 /* Effects.storyboard */,
 				C4B491A320C7C94E00FD565A /* EffectsPanelController.swift */,
 				C432978D20C902EC0063F795 /* UI Components */,
 				C40CBA2920CDEBA200A8245F /* README.md */,
@@ -917,7 +1250,7 @@
 		C4B491A520C7C95900FD565A /* Generators */ = {
 			isa = PBXGroup;
 			children = (
-				C4F3B1E520F488530072FFF4 /* Generators.storyboard */,
+				EA388CF8210499530026C0C0 /* Generators.storyboard */,
 				C4B491A620C7C95900FD565A /* GeneratorsPanelController.swift */,
 				C4B491C420C7EC2E00FD565A /* README.md */,
 				C432978C20C902C80063F795 /* UI Components */,
@@ -941,7 +1274,7 @@
 			children = (
 				94D917AB1F550D0D006ACB4E /* FlatToggleButtonStyleKit.swift */,
 				C4B491C020C7DF2A00FD565A /* MorphSelectorStyleKit.swift */,
-				C4B491C120C7DF2A00FD565A /* LFOPickerStyleKit.swift */,
+				9479F20421E4FB05003605B9 /* TopUIButtonStyleKit.swift */,
 			);
 			path = StyleKits;
 			sourceTree = "<group>";
@@ -949,6 +1282,7 @@
 		C4D193BB1F1187B500FF4FE4 = {
 			isa = PBXGroup;
 			children = (
+				EA143DF8210A86DC00543E17 /* Dev.strings */,
 				C435C4D620C511DB00DAECCD /* README.md */,
 				C4D193C61F1187B500FF4FE4 /* AudioKitSynthOne */,
 				9461F0371F5CAAE600EE226E /* Frameworks */,
@@ -973,6 +1307,8 @@
 				C40CBA2620CDE2B000A8245F /* README.md */,
 				94780FEF1F9B0108006D3710 /* AudioKitSynthOne.entitlements */,
 				C4D193D31F1187B500FF4FE4 /* Info.plist */,
+				EA388D1D21071BD50026C0C0 /* Localizable.strings */,
+				EA388D1A21071BD50026C0C0 /* InfoPlist.strings */,
 				C4D193C71F1187B500FF4FE4 /* AppDelegate.swift */,
 				C435C50220C5286B00DAECCD /* Helpers.swift */,
 				EA090E4320F74B0A0012A8F7 /* Private.swift */,
@@ -988,6 +1324,7 @@
 				C4B491A520C7C95900FD565A /* Generators */,
 				C4B4917520C7C75500FD565A /* Header */,
 				C4B4911620C7C62A00FD565A /* Keyboard */,
+				C43A13AC20FC4B3A009E2B30 /* Link */,
 				C435C52620C52D2E00DAECCD /* MIDI */,
 				C4B4916320C7C72900FD565A /* Manager */,
 				C4B4915C20C7C72900FD565A /* Navigation */,
@@ -1011,6 +1348,115 @@
 			path = Controls;
 			sourceTree = "<group>";
 		};
+		F482CBF52123CDE70093ADC8 /* BandlimitedWavetables */ = {
+			isa = PBXGroup;
+			children = (
+				F482CBF72123CDE70093ADC8 /* bandlimitedWaveformFrequencies.json */,
+				F482CC172123CDE70093ADC8 /* bandlimitedWaveforms.json */,
+				F482CC652123CE340093ADC8 /* Triangle */,
+				F482CC622123CE0A0093ADC8 /* PWM */,
+				F482CC642123CE230093ADC8 /* Square */,
+				F482CC632123CE180093ADC8 /* Sawtooth */,
+			);
+			path = BandlimitedWavetables;
+			sourceTree = "<group>";
+		};
+		F482CC622123CE0A0093ADC8 /* PWM */ = {
+			isa = PBXGroup;
+			children = (
+				F482CBF82123CDE70093ADC8 /* pwm_0000.json */,
+				F482CC022123CDE70093ADC8 /* pwm_0001.json */,
+				F482CC202123CDE70093ADC8 /* pwm_0002.json */,
+				F482CC1C2123CDE70093ADC8 /* pwm_0005.json */,
+				F482CC0B2123CDE70093ADC8 /* pwm_0010.json */,
+				F482CBFF2123CDE70093ADC8 /* pwm_0021.json */,
+				F482CC2B2123CDE70093ADC8 /* pwm_0042.json */,
+				F482CC092123CDE70093ADC8 /* pwm_0084.json */,
+				F482CC032123CDE70093ADC8 /* pwm_0168.json */,
+				F482CC102123CDE70093ADC8 /* pwm_0337.json */,
+				F482CC1F2123CDE70093ADC8 /* pwm_0674.json */,
+				F482CBFD2123CDE70093ADC8 /* pwm_1348.json */,
+				F482CC282123CDE70093ADC8 /* pwm_2696.json */,
+			);
+			path = PWM;
+			sourceTree = "<group>";
+		};
+		F482CC632123CE180093ADC8 /* Sawtooth */ = {
+			isa = PBXGroup;
+			children = (
+				F482CC212123CDE70093ADC8 /* sawtooth_0000.json */,
+				F482CC222123CDE70093ADC8 /* sawtooth_0001.json */,
+				F482CBFA2123CDE70093ADC8 /* sawtooth_0002.json */,
+				F482CC0F2123CDE70093ADC8 /* sawtooth_0005.json */,
+				F482CC142123CDE70093ADC8 /* sawtooth_0010.json */,
+				F482CC2A2123CDE70093ADC8 /* sawtooth_0021.json */,
+				F482CC002123CDE70093ADC8 /* sawtooth_0042.json */,
+				F482CC132123CDE70093ADC8 /* sawtooth_0084.json */,
+				F482CC252123CDE70093ADC8 /* sawtooth_0168.json */,
+				F482CC0A2123CDE70093ADC8 /* sawtooth_0337.json */,
+				F482CC0C2123CDE70093ADC8 /* sawtooth_0674.json */,
+				F482CC292123CDE70093ADC8 /* sawtooth_1348.json */,
+				F482CBFE2123CDE70093ADC8 /* sawtooth_2696.json */,
+			);
+			path = Sawtooth;
+			sourceTree = "<group>";
+		};
+		F482CC642123CE230093ADC8 /* Square */ = {
+			isa = PBXGroup;
+			children = (
+				F482CC1E2123CDE70093ADC8 /* square_0000.json */,
+				F482CC112123CDE70093ADC8 /* square_0001.json */,
+				F482CC0D2123CDE70093ADC8 /* square_0002.json */,
+				F482CBFC2123CDE70093ADC8 /* square_0005.json */,
+				F482CC262123CDE70093ADC8 /* square_0010.json */,
+				F482CC1A2123CDE70093ADC8 /* square_0021.json */,
+				F482CC082123CDE70093ADC8 /* square_0042.json */,
+				F482CC232123CDE70093ADC8 /* square_0084.json */,
+				F482CC152123CDE70093ADC8 /* square_0168.json */,
+				F482CC012123CDE70093ADC8 /* square_0337.json */,
+				F482CBF92123CDE70093ADC8 /* square_0674.json */,
+				F482CC182123CDE70093ADC8 /* square_1348.json */,
+				F482CC062123CDE70093ADC8 /* square_2696.json */,
+			);
+			path = Square;
+			sourceTree = "<group>";
+		};
+		F482CC652123CE340093ADC8 /* Triangle */ = {
+			isa = PBXGroup;
+			children = (
+				F482CC1D2123CDE70093ADC8 /* triangle_0000.json */,
+				F482CC162123CDE70093ADC8 /* triangle_0001.json */,
+				F482CC0E2123CDE70093ADC8 /* triangle_0002.json */,
+				F482CBFB2123CDE70093ADC8 /* triangle_0005.json */,
+				F482CC242123CDE70093ADC8 /* triangle_0010.json */,
+				F482CC192123CDE70093ADC8 /* triangle_0021.json */,
+				F482CC052123CDE70093ADC8 /* triangle_0042.json */,
+				F482CC272123CDE70093ADC8 /* triangle_0084.json */,
+				F482CC122123CDE70093ADC8 /* triangle_0168.json */,
+				F482CC042123CDE70093ADC8 /* triangle_0337.json */,
+				F482CBF62123CDE70093ADC8 /* triangle_0674.json */,
+				F482CC1B2123CDE70093ADC8 /* triangle_1348.json */,
+				F482CC072123CDE70093ADC8 /* triangle_2696.json */,
+			);
+			path = Triangle;
+			sourceTree = "<group>";
+		};
+		F4E4D00A21C87CC7005B2FAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C435C52C20C52D4B00DAECCD /* Tuning.swift */,
+				F4E4D00321C5B9F2005B2FAF /* TuningBank.swift */,
+				C435C52E20C52D4B00DAECCD /* Tunings.swift */,
+				F4E4D00821C87B9F005B2FAF /* Tunings+DefaultTunings.swift */,
+				C435C52F20C52D4B00DAECCD /* Tunings+Harmonic.swift */,
+				C435C52D20C52D4B00DAECCD /* Tunings+Math.swift */,
+				F47C27E32207C12100CA7541 /* Tunings+TuneUp.swift */,
+				F4C9D9A221D6B13200B7C4E5 /* Tunings+UpgradePaths.swift */,
+				F4E4D00521C81DB4005B2FAF /* tunings_v0_upgrade_path_test.json */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1021,7 +1467,6 @@
 				49E9B8C03D2127F41FFB0052 /* [CP] Check Pods Manifest.lock */,
 				941645C620B3597300D62851 /* Sources */,
 				941645C720B3597300D62851 /* Frameworks */,
-				941645C820B3597300D62851 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1067,12 +1512,13 @@
 					941645C920B3597300D62851 = {
 						CreatedOnToolsVersion = 9.3.1;
 						DevelopmentTeam = 9W69ZP8S5F;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					C4D193C31F1187B500FF4FE4 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 9W69ZP8S5F;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -1093,11 +1539,17 @@
 			};
 			buildConfigurationList = C4D193BF1F1187B500FF4FE4 /* Build configuration list for PBXProject "AudioKitSynthOne" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				tr,
+				fr,
+				"pt-BR",
+				ja,
+				"zh-Hant",
+				"zh-Hans",
 			);
 			mainGroup = C4D193BB1F1187B500FF4FE4;
 			productRefGroup = C4D193C51F1187B500FF4FE4 /* Products */;
@@ -1111,42 +1563,93 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		941645C820B3597300D62851 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C4D193C21F1187B500FF4FE4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F482CC4C2123CDE70093ADC8 /* triangle_0001.json in Resources */,
+				F482CC532123CDE70093ADC8 /* triangle_0000.json in Resources */,
+				F482CC5B2123CDE70093ADC8 /* sawtooth_0168.json in Resources */,
+				F482CC2E2123CDE70093ADC8 /* pwm_0000.json in Resources */,
+				F482CC312123CDE70093ADC8 /* triangle_0005.json in Resources */,
+				F482CC3E2123CDE70093ADC8 /* square_0042.json in Resources */,
+				F482CC422123CDE70093ADC8 /* sawtooth_0674.json in Resources */,
+				F482CC402123CDE70093ADC8 /* sawtooth_0337.json in Resources */,
+				F482CC4B2123CDE70093ADC8 /* square_0168.json in Resources */,
 				C435C51F20C52D1700DAECCD /* Brice Beasley.json in Resources */,
+				F482CC3F2123CDE70093ADC8 /* pwm_0084.json in Resources */,
+				F482CC3C2123CDE70093ADC8 /* square_2696.json in Resources */,
 				C435C52020C52D1700DAECCD /* DJ Puzzle.json in Resources */,
-				C4F3B1DB20F488060072FFF4 /* About.storyboard in Resources */,
-				C4F3B1E920F4885C0072FFF4 /* Header.storyboard in Resources */,
+				EA388CDE210498AC0026C0C0 /* About.storyboard in Resources */,
+				EA388D1C21071BD50026C0C0 /* InfoPlist.strings in Resources */,
+				EA388D1F21071BD50026C0C0 /* Localizable.strings in Resources */,
+				F482CC572123CDE70093ADC8 /* sawtooth_0000.json in Resources */,
+				EA388CE1210498DD0026C0C0 /* Header.storyboard in Resources */,
+				F482CC442123CDE70093ADC8 /* triangle_0002.json in Resources */,
+				F482CC5C2123CDE70093ADC8 /* square_0010.json in Resources */,
 				94985FF520D8908600D71239 /* JEC.json in Resources */,
+				F482CC3B2123CDE70093ADC8 /* triangle_0042.json in Resources */,
+				F482CC482123CDE70093ADC8 /* triangle_0168.json in Resources */,
+				F482CC542123CDE70093ADC8 /* square_0000.json in Resources */,
+				F482CC5F2123CDE70093ADC8 /* sawtooth_1348.json in Resources */,
+				F482CC302123CDE70093ADC8 /* sawtooth_0002.json in Resources */,
+				F482CC2D2123CDE70093ADC8 /* bandlimitedWaveformFrequencies.json in Resources */,
 				C435C52320C52D1700DAECCD /* Red Sky Lullaby.json in Resources */,
+				F482CC612123CDE70093ADC8 /* pwm_0042.json in Resources */,
+				94D2AF2721EE57AA006E2312 /* Francis Preve.json in Resources */,
+				F482CC392123CDE70093ADC8 /* pwm_0168.json in Resources */,
 				C435C52220C52D1700DAECCD /* User.json in Resources */,
+				F482CC342123CDE70093ADC8 /* sawtooth_2696.json in Resources */,
+				F482CC602123CDE70093ADC8 /* sawtooth_0021.json in Resources */,
 				C4B4913E20C7C6A000FD565A /* spark.png in Resources */,
+				F482CC382123CDE70093ADC8 /* pwm_0001.json in Resources */,
 				94985FF320D8899300D71239 /* Electronisounds.json in Resources */,
+				F482CC3D2123CDE70093ADC8 /* triangle_2696.json in Resources */,
+				F482CC492123CDE70093ADC8 /* sawtooth_0084.json in Resources */,
+				F482CC582123CDE70093ADC8 /* sawtooth_0001.json in Resources */,
+				F482CC4D2123CDE70093ADC8 /* bandlimitedWaveforms.json in Resources */,
+				F482CC502123CDE70093ADC8 /* square_0021.json in Resources */,
+				F482CC322123CDE70093ADC8 /* square_0005.json in Resources */,
 				C435C52420C52D1700DAECCD /* BankA.json in Resources */,
-				C4F3B1F220F4888D0072FFF4 /* TouchPad.storyboard in Resources */,
-				C4F3B1F520F4889D0072FFF4 /* Tunings.storyboard in Resources */,
-				C4F3B1E020F4883A0072FFF4 /* Effects.storyboard in Resources */,
+				EA388CED210499070026C0C0 /* TouchPad.storyboard in Resources */,
+				F482CC512123CDE70093ADC8 /* triangle_1348.json in Resources */,
+				F482CC452123CDE70093ADC8 /* sawtooth_0005.json in Resources */,
+				F482CC332123CDE70093ADC8 /* pwm_1348.json in Resources */,
+				EA388CEA210498FD0026C0C0 /* Tunings.storyboard in Resources */,
+				F482CC2F2123CDE70093ADC8 /* square_0674.json in Resources */,
+				EA388CE4210498E90026C0C0 /* Effects.storyboard in Resources */,
 				941752BA20E2BD2E0076D953 /* Starter Bank.json in Resources */,
+				F482CC462123CDE70093ADC8 /* pwm_0337.json in Resources */,
+				F482CC5E2123CDE70093ADC8 /* pwm_2696.json in Resources */,
+				F482CC552123CDE70093ADC8 /* pwm_0674.json in Resources */,
+				F482CC372123CDE70093ADC8 /* square_0337.json in Resources */,
 				94D37DD420E06641002008A4 /* Sound of Izrael.json in Resources */,
+				F482CC5D2123CDE70093ADC8 /* triangle_0084.json in Resources */,
 				C435C52120C52D1700DAECCD /* Bonus.json in Resources */,
+				F482CC362123CDE70093ADC8 /* sawtooth_0042.json in Resources */,
+				F482CC522123CDE70093ADC8 /* pwm_0005.json in Resources */,
+				F482CC2C2123CDE70093ADC8 /* triangle_0674.json in Resources */,
+				F482CC4E2123CDE70093ADC8 /* square_1348.json in Resources */,
 				C4D193CF1F1187B500FF4FE4 /* Assets.xcassets in Resources */,
-				C4F3B1EF20F4887E0072FFF4 /* Sequencer.storyboard in Resources */,
-				C4F3B1E320F488490072FFF4 /* Envelopes.storyboard in Resources */,
+				EA388CF0210499110026C0C0 /* Sequencer.storyboard in Resources */,
+				EA388CF32104991C0026C0C0 /* Envelopes.storyboard in Resources */,
+				F482CC5A2123CDE70093ADC8 /* triangle_0010.json in Resources */,
+				F482CC562123CDE70093ADC8 /* pwm_0002.json in Resources */,
 				C4B491C520C7EC2E00FD565A /* README.md in Resources */,
 				C4D193CD1F1187B500FF4FE4 /* Main.storyboard in Resources */,
-				C4F3B1E620F488530072FFF4 /* Generators.storyboard in Resources */,
-				C4F3B1DE20F4882D0072FFF4 /* MailingList.storyboard in Resources */,
-				C4F3B1F820F489550072FFF4 /* Dev.storyboard in Resources */,
-				C4F3B1EC20F4886E0072FFF4 /* Presets.storyboard in Resources */,
+				EA388CF6210499530026C0C0 /* Generators.storyboard in Resources */,
+				F482CC412123CDE70093ADC8 /* pwm_0010.json in Resources */,
+				F482CC432123CDE70093ADC8 /* square_0002.json in Resources */,
+				F482CC4F2123CDE70093ADC8 /* triangle_0021.json in Resources */,
+				EA388CF92104995B0026C0C0 /* MailingList.storyboard in Resources */,
+				F482CC3A2123CDE70093ADC8 /* triangle_0337.json in Resources */,
+				F482CC4A2123CDE70093ADC8 /* sawtooth_0010.json in Resources */,
+				F4E4D00721C81E34005B2FAF /* tunings_v0_upgrade_path_test.json in Resources */,
+				F482CC592123CDE70093ADC8 /* square_0084.json in Resources */,
+				EA388CFC210548460026C0C0 /* Dev.storyboard in Resources */,
+				F482CC472123CDE70093ADC8 /* square_0001.json in Resources */,
+				EA388CE7210498F20026C0C0 /* Presets.storyboard in Resources */,
+				F482CC352123CDE70093ADC8 /* pwm_0021.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1202,7 +1705,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "#if which swiftlint >/dev/null; then\n#swiftlint\n#else\n#echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n#fi\n";
 		};
 		F326D17312DDE12585405CB6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1242,6 +1745,7 @@
 				C4B491A720C7C95A00FD565A /* GeneratorsPanelController.swift in Sources */,
 				947956AD1F329AB200FE5D9B /* StepperStyleKit.swift in Sources */,
 				C4B491AF20C7D10200FD565A /* LFOWavePicker.swift in Sources */,
+				F4CA406F225192A60053F29E /* MIDISynthButton.swift in Sources */,
 				C4B490F720C654E600FD565A /* S1DSPKernel+reset.mm in Sources */,
 				C435C58420C530C900DAECCD /* S1NoteState.mm in Sources */,
 				C4B4915220C7C6FC00FD565A /* Manager+MIDISettingsPopOverDelegate.swift in Sources */,
@@ -1251,6 +1755,7 @@
 				C4B4919920C7C81200FD565A /* MailingListViewController.swift in Sources */,
 				C4B4916920C7C72A00FD565A /* ChildPanel.swift in Sources */,
 				C435C57B20C530C900DAECCD /* AEWeakRetainingProxy.m in Sources */,
+				C43A13AE20FC4C7C009E2B30 /* ABLLinkManager.swift in Sources */,
 				C4B491B520C7D19F00FD565A /* TempoStepper.swift in Sources */,
 				C435C58220C530C900DAECCD /* AEMainThreadEndpoint.m in Sources */,
 				C4F7ECB71F244A510011B119 /* KnobStyleKit.swift in Sources */,
@@ -1273,6 +1778,7 @@
 				C4B491A120C7C91A00FD565A /* EnvelopesPanelController.swift in Sources */,
 				94D917AD1F550D0E006ACB4E /* FlatToggleButtonStyleKit.swift in Sources */,
 				C432979320CB2BB20063F795 /* Presets+LoadSaveManipulate.swift in Sources */,
+				F4CA406D224EB2A70053F29E /* S1Control.swift in Sources */,
 				C435C53020C52D4C00DAECCD /* Tuning.swift in Sources */,
 				C4B4910E20C7C5E500FD565A /* Manager+AppSettings.swift in Sources */,
 				C4B4918A20C7C79C00FD565A /* Presets+UIDocumentPickerDelegate.swift in Sources */,
@@ -1282,6 +1788,8 @@
 				C4F7ECB81F244A510011B119 /* ToggleButton.swift in Sources */,
 				C435C57F20C530C900DAECCD /* AEUtilities.m in Sources */,
 				C435C57920C530C900DAECCD /* AKSynthOne.swift in Sources */,
+				F4AD9EE4224866BE002B0E2E /* MIDIToggleSwitch.swift in Sources */,
+				94189CB8219F27130004C28B /* MoreAppsController.swift in Sources */,
 				C4B4914020C7C6A000FD565A /* TouchPointStyleKit.swift in Sources */,
 				C435C4F820C5234900DAECCD /* CategoryCell.swift in Sources */,
 				C435C53120C52D4C00DAECCD /* Tunings+Math.swift in Sources */,
@@ -1308,12 +1816,18 @@
 				94FEFEC91F3150D00064EC09 /* SliderTransposeButton.swift in Sources */,
 				C4B4914820C7C6E300FD565A /* Audiobus.swift in Sources */,
 				C4B4917920C7C75500FD565A /* Manager+HeaderDelegate.swift in Sources */,
+				AF8CC7C0224815F200090F64 /* S1Sequencer.mm in Sources */,
 				C4B490F320C6539200FD565A /* S1DSPKernel+process.mm in Sources */,
 				C4B4916E20C7C72A00FD565A /* Manager.swift in Sources */,
+				F4B1AD65228BDCEC009FA6BA /* S1TuningTable.swift in Sources */,
+				F47C27E42207C12100CA7541 /* Tunings+TuneUp.swift in Sources */,
 				C4B490E920C64AC600FD565A /* S1DSPKernel+MIDI.mm in Sources */,
 				C4B490E720C649D900FD565A /* S1DSPKernel+destroy.mm in Sources */,
+				F4E4D00421C5B9F2005B2FAF /* TuningBank.swift in Sources */,
 				949D93B91F2C188C007E657B /* LFOToggle.swift in Sources */,
 				C435C4FB20C5234900DAECCD /* PresetCell.swift in Sources */,
+				F4AD9EE022484EFA002B0E2E /* MIDIArpDirectionButton.swift in Sources */,
+				F4E4D00921C87B9F005B2FAF /* Tunings+DefaultTunings.swift in Sources */,
 				C4B4915B20C7C70D00FD565A /* TuningsPanelController.swift in Sources */,
 				C4B4917320C7C73B00FD565A /* Manager+DevView.swift in Sources */,
 				94DB18D21F37D879008368AE /* NavButton.swift in Sources */,
@@ -1328,19 +1842,25 @@
 				947956B31F32A70400FE5D9B /* ToggleSwitchStyleKit.swift in Sources */,
 				C4B491B120C7D11500FD565A /* MIDIKnob.swift in Sources */,
 				C47FB3C31F36694300EF2F01 /* RateKnob.swift in Sources */,
+				946980572169258A007EAA5B /* String+CapitalizeFirst.swift in Sources */,
+				F4AD9EE2224856C2002B0E2E /* MIDIToggleButton.swift in Sources */,
 				C4B491BC20C7DEB100FD565A /* ArpButtonStyleKit.swift in Sources */,
 				C4B4919420C7C7C500FD565A /* PresetEditorViewController.swift in Sources */,
 				C4B4918620C7C79C00FD565A /* Presets+PresetCellDelegate.swift in Sources */,
 				C435C57A20C530C900DAECCD /* SDSustainer.swift in Sources */,
 				C435C58020C530C900DAECCD /* AETime.m in Sources */,
+				94AA87962216293F005BE569 /* TuneUpPopUp.swift in Sources */,
 				C4B4915A20C7C70D00FD565A /* TuningsPanel+UITableViewDataSource.swift in Sources */,
 				C435C4FA20C5234900DAECCD /* TuningCell.swift in Sources */,
 				94656AED205F410900634B2C /* KeyboardShowButton.swift in Sources */,
+				9479F20321E4F9CE003605B9 /* iPhoneToggleButton.swift in Sources */,
 				947956A91F329AB200FE5D9B /* Stepper.swift in Sources */,
+				9479F20521E4FB06003605B9 /* TopUIButtonStyleKit.swift in Sources */,
 				C4B491A420C7C94E00FD565A /* EffectsPanelController.swift in Sources */,
 				C432979120CB2AA00063F795 /* Presets+UITextViewDelegate.swift in Sources */,
 				C4B490F120C64ED300FD565A /* S1DSPKernel+tapers.mm in Sources */,
 				C4B4915920C7C70D00FD565A /* TuningsPanel+UITableViewDelegate.swift in Sources */,
+				F4C9D9A321D6B13200B7C4E5 /* Tunings+UpgradePaths.swift in Sources */,
 				C435C4F920C5234900DAECCD /* MIDICell.swift in Sources */,
 				94A5039D1FF2F6E30097D37C /* ChannelStepper.swift in Sources */,
 				C4D193C81F1187B500FF4FE4 /* AppDelegate.swift in Sources */,
@@ -1349,6 +1869,7 @@
 				C4B4911E20C7C62A00FD565A /* BlackKeyStyleKit.swift in Sources */,
 				C4B4910D20C7C5E500FD565A /* AppSettings.swift in Sources */,
 				C4B4913F20C7C6A000FD565A /* TouchPadPanelController.swift in Sources */,
+				F4C790142247025C003CFF28 /* MIDIStepper.swift in Sources */,
 				949D93B71F2C188C007E657B /* LFOButtonStyleKit.swift in Sources */,
 				C4B4910720C7C5C500FD565A /* ArpButton.swift in Sources */,
 				94F694C61F683D5D0061DA5E /* CallbackButton.swift in Sources */,
@@ -1367,6 +1888,7 @@
 				C4B4917420C7C73B00FD565A /* DevViewController.swift in Sources */,
 				C4B4917A20C7C75500FD565A /* HeaderNavButton.swift in Sources */,
 				C4B4918C20C7C79C00FD565A /* Presets+UITableViewDelegate.swift in Sources */,
+				F47C27E62207C74000CA7541 /* TuningsPanel+TuneUpDelegate.swift in Sources */,
 				94DB3FE01FC8C0EA007F8081 /* PresetUIButton.swift in Sources */,
 				C4B4916720C7C72A00FD565A /* PanelController.swift in Sources */,
 				C4B491BE20C7DEB100FD565A /* ArpDirectionStyleKit.swift in Sources */,
@@ -1376,6 +1898,7 @@
 				C435C57820C530C900DAECCD /* Conductor.swift in Sources */,
 				C4B490F520C6542500FD565A /* S1DSPKernel+parameters.mm in Sources */,
 				C4B4912220C7C65000FD565A /* ModWheelStyleKit.swift in Sources */,
+				C45DF29C21016A0E000AB3FD /* LinkExtensions.swift in Sources */,
 				C4B4918E20C7C7A400FD565A /* Manager+PresetsDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1395,8 +1918,240 @@
 			isa = PBXVariantGroup;
 			children = (
 				C4D193CC1F1187B500FF4FE4 /* Base */,
+				9405503A210556C20039F101 /* en */,
+				EA388CFF2106A2D60026C0C0 /* fr */,
+				EA388D0B2106A2E50026C0C0 /* tr */,
+				EA143DCB210A846100543E17 /* pt-BR */,
+				9441B8402126618C003A5163 /* ja */,
+				94F53E4F212F0C4D0012C0DE /* zh-Hant */,
+				94F53E7D212F11620012C0DE /* zh-Hans */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA143DF8210A86DC00543E17 /* Dev.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA143DF9210A86DC00543E17 /* pt-BR */,
+				EA143E05210FDA3C00543E17 /* fr */,
+				EA143E29211289E100543E17 /* tr */,
+				9441B84B2126618D003A5163 /* ja */,
+				94F53E5B212F0C4E0012C0DE /* zh-Hant */,
+				94F53E8C212F11A90012C0DE /* zh-Hans */,
+			);
+			name = Dev.strings;
+			path = "AudioKitSynthOne/Developer/pt-BR.lproj";
+			sourceTree = "<group>";
+		};
+		EA388CE0210498AC0026C0C0 /* About.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA388CDF210498AC0026C0C0 /* Base */,
+				9405503B210556C80039F101 /* en */,
+				EA388D002106A2D60026C0C0 /* fr */,
+				EA388D0C2106A2E50026C0C0 /* tr */,
+				EA143DCC210A846100543E17 /* pt-BR */,
+				9441B8412126618D003A5163 /* ja */,
+				94F53E50212F0C4D0012C0DE /* zh-Hant */,
+				94F53E7E212F11620012C0DE /* zh-Hans */,
+			);
+			name = About.storyboard;
+			sourceTree = "<group>";
+		};
+		EA388CE3210498DD0026C0C0 /* Header.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA388CE2210498DD0026C0C0 /* Base */,
+				9405503F2105570F0039F101 /* en */,
+				EA388D062106A2D60026C0C0 /* fr */,
+				EA388D122106A2E50026C0C0 /* tr */,
+				EA143DD2210A846100543E17 /* pt-BR */,
+				9441B8472126618D003A5163 /* ja */,
+				94F53E56212F0C4D0012C0DE /* zh-Hant */,
+				94F53E84212F11630012C0DE /* zh-Hans */,
+			);
+			name = Header.storyboard;
+			sourceTree = "<group>";
+		};
+		EA388CE6210498E90026C0C0 /* Effects.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA388CE5210498E90026C0C0 /* Base */,
+				9405503C210556F20039F101 /* en */,
+				EA388D032106A2D60026C0C0 /* fr */,
+				EA388D0F2106A2E50026C0C0 /* tr */,
+				EA143DCF210A846100543E17 /* pt-BR */,
+				9441B8442126618D003A5163 /* ja */,
+				94F53E53212F0C4D0012C0DE /* zh-Hant */,
+				94F53E81212F11620012C0DE /* zh-Hans */,
+			);
+			name = Effects.storyboard;
+			sourceTree = "<group>";
+		};
+		EA388CE9210498F20026C0C0 /* Presets.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA388CE8210498F20026C0C0 /* Base */,
+				94055040210557470039F101 /* en */,
+				EA388D072106A2D70026C0C0 /* fr */,
+				EA388D132106A2E60026C0C0 /* tr */,
+				EA143DD3210A846100543E17 /* pt-BR */,
+				9441B83D2126618C003A5163 /* ja */,
+				94F53E57212F0C4D0012C0DE /* zh-Hant */,
+				94F53E85212F11630012C0DE /* zh-Hans */,
+			);
+			name = Presets.storyboard;
+			sourceTree = "<group>";
+		};
+		EA388CEC210498FD0026C0C0 /* Tunings.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA388CEB210498FD0026C0C0 /* Base */,
+				94055043210557600039F101 /* en */,
+				EA388D0A2106A2D70026C0C0 /* fr */,
+				EA388D162106A2E60026C0C0 /* tr */,
+				EA143DD6210A846100543E17 /* pt-BR */,
+				9441B84A2126618D003A5163 /* ja */,
+				94F53E5A212F0C4D0012C0DE /* zh-Hant */,
+				94F53E88212F11630012C0DE /* zh-Hans */,
+			);
+			name = Tunings.storyboard;
+			sourceTree = "<group>";
+		};
+		EA388CEF210499070026C0C0 /* TouchPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA388CEE210499070026C0C0 /* Base */,
+				94055042210557580039F101 /* en */,
+				EA388D092106A2D70026C0C0 /* fr */,
+				EA388D152106A2E60026C0C0 /* tr */,
+				EA143DD5210A846100543E17 /* pt-BR */,
+				9441B8492126618D003A5163 /* ja */,
+				94F53E59212F0C4D0012C0DE /* zh-Hant */,
+				94F53E87212F11630012C0DE /* zh-Hans */,
+			);
+			name = TouchPad.storyboard;
+			sourceTree = "<group>";
+		};
+		EA388CF2210499110026C0C0 /* Sequencer.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA388CF1210499110026C0C0 /* Base */,
+				940550412105574F0039F101 /* en */,
+				EA388D082106A2D70026C0C0 /* fr */,
+				EA388D142106A2E60026C0C0 /* tr */,
+				EA143DD4210A846100543E17 /* pt-BR */,
+				9441B8482126618D003A5163 /* ja */,
+				94F53E58212F0C4D0012C0DE /* zh-Hant */,
+				94F53E86212F11630012C0DE /* zh-Hans */,
+			);
+			name = Sequencer.storyboard;
+			sourceTree = "<group>";
+		};
+		EA388CF52104991C0026C0C0 /* Envelopes.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA388CF42104991C0026C0C0 /* Base */,
+				9405503D210556FA0039F101 /* en */,
+				EA388D042106A2D60026C0C0 /* fr */,
+				EA388D102106A2E50026C0C0 /* tr */,
+				EA143DD0210A846100543E17 /* pt-BR */,
+				9441B8452126618D003A5163 /* ja */,
+				94F53E54212F0C4D0012C0DE /* zh-Hant */,
+				94F53E82212F11620012C0DE /* zh-Hans */,
+			);
+			name = Envelopes.storyboard;
+			sourceTree = "<group>";
+		};
+		EA388CF8210499530026C0C0 /* Generators.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA388CF7210499530026C0C0 /* Base */,
+				9405503E210557040039F101 /* en */,
+				EA388D052106A2D60026C0C0 /* fr */,
+				EA388D112106A2E50026C0C0 /* tr */,
+				EA143DD1210A846100543E17 /* pt-BR */,
+				9441B8462126618D003A5163 /* ja */,
+				94F53E55212F0C4D0012C0DE /* zh-Hant */,
+				94F53E83212F11620012C0DE /* zh-Hans */,
+			);
+			name = Generators.storyboard;
+			sourceTree = "<group>";
+		};
+		EA388CFB2104995B0026C0C0 /* MailingList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA388CFA2104995B0026C0C0 /* Base */,
+				EA388D012106A2D60026C0C0 /* fr */,
+				EA388D0D2106A2E50026C0C0 /* tr */,
+				EA2354D1210879AC0018E035 /* en */,
+				EA143DCD210A846100543E17 /* pt-BR */,
+				9441B8422126618D003A5163 /* ja */,
+				94F53E51212F0C4D0012C0DE /* zh-Hant */,
+				94F53E7F212F11620012C0DE /* zh-Hans */,
+			);
+			name = MailingList.storyboard;
+			sourceTree = "<group>";
+		};
+		EA388CFE210548460026C0C0 /* Dev.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA388CFD210548460026C0C0 /* Base */,
+				EA388D022106A2D60026C0C0 /* fr */,
+				EA388D0E2106A2E50026C0C0 /* tr */,
+				EA2354D2210879DF0018E035 /* en */,
+				EA143DCE210A846100543E17 /* pt-BR */,
+				9441B8432126618D003A5163 /* ja */,
+				94F53E52212F0C4D0012C0DE /* zh-Hant */,
+				94F53E80212F11620012C0DE /* zh-Hans */,
+			);
+			name = Dev.storyboard;
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		EA388D1721071BD50026C0C0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA388D1821071BD50026C0C0 /* tr */,
+				EA143DC6210A842E00543E17 /* Base */,
+				EA143DC7210A843000543E17 /* en */,
+				EA143DC8210A843500543E17 /* fr */,
+				EA143DD9210A846200543E17 /* pt-BR */,
+				9441B84C2126618E003A5163 /* ja */,
+				94F53E5E212F0C4E0012C0DE /* zh-Hant */,
+				94F53E8B212F11790012C0DE /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EA388D1A21071BD50026C0C0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA143DC4210A83D600543E17 /* en */,
+				EA143DC5210A83DF00543E17 /* Base */,
+				EA143DC9210A844100543E17 /* tr */,
+				EA143DCA210A844400543E17 /* fr */,
+				EA143DD8210A846100543E17 /* pt-BR */,
+				9441B83F2126618C003A5163 /* ja */,
+				94F53E5D212F0C4E0012C0DE /* zh-Hant */,
+				94F53E8A212F11790012C0DE /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EA388D1D21071BD50026C0C0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA388D1E21071BD50026C0C0 /* tr */,
+				EA388D2221071C170026C0C0 /* fr */,
+				EA388D2721071C330026C0C0 /* Base */,
+				EA2354D421087C500018E035 /* en */,
+				EA143DD7210A846100543E17 /* pt-BR */,
+				9441B83E2126618C003A5163 /* ja */,
+				94F53E5C212F0C4E0012C0DE /* zh-Hant */,
+				94F53E89212F11790012C0DE /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1421,7 +2176,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.audiokitpro.AudioKitSynthOne.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1445,7 +2200,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.audiokitpro.AudioKitSynthOne.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1453,7 +2208,10 @@
 		C4D193D41F1187B500FF4FE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ABLETON_ENABLED = 0;
+				ABLETON_LIB_1 = "-lABLLink";
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1493,6 +2251,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					"ABLETON_ENABLED=$(ABLETON_ENABLED)",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -1509,7 +2268,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-lstdc++";
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG ABLETON_ENABLED_$(ABLETON_ENABLED)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/AudioKitSynthOne/DSP/AudioKitSynthOne-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1520,7 +2279,10 @@
 		C4D193D51F1187B500FF4FE4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ABLETON_ENABLED = 0;
+				ABLETON_LIB_1 = "-lABLLink";
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1555,6 +2317,7 @@
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "ABLETON_ENABLED=$(ABLETON_ENABLED)";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1569,6 +2332,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-lstdc++";
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "ABLETON_ENABLED_$(ABLETON_ENABLED)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/AudioKitSynthOne/DSP/AudioKitSynthOne-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1584,24 +2348,37 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = AudioKitSynthOne/AudioKitSynthOne.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9W69ZP8S5F;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = AudioKitSynthOne/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AudioKitSynthOne/Link/lib",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fno-aligned-allocation",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(ABLETON_LIB_$(ABLETON_ENABLED))",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.audiokitpro.AudioKitSynthOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/AudioKitSynthOne/DSP/AudioKitSynthOne-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1612,23 +2389,36 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = AudioKitSynthOne/AudioKitSynthOne.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9W69ZP8S5F;
+				GCC_OPTIMIZATION_LEVEL = fast;
 				INFOPLIST_FILE = AudioKitSynthOne/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AudioKitSynthOne/Link/lib",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fno-aligned-allocation",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(ABLETON_LIB_$(ABLETON_ENABLED))",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.audiokitpro.AudioKitSynthOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/AudioKitSynthOne/DSP/AudioKitSynthOne-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

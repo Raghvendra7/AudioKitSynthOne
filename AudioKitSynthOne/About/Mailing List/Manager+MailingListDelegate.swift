@@ -9,12 +9,13 @@
 // Mailing List PopOver Delegate
 
 extension Manager: MailingListDelegate {
+  
     func didSignMailingList(email: String) {
 
         signedMailingList = true
 
         DispatchQueue.main.async {
-            if let headerVC = self.childViewControllers.first as? HeaderViewController {
+            if let headerVC = self.children.first as? HeaderViewController {
                 headerVC.updateMailingListButton(self.signedMailingList)
             }
         }
@@ -28,4 +29,5 @@ extension Manager: MailingListDelegate {
 
         presetsViewController.addBonusPresets()
     }
+    
 }

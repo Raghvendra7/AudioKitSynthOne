@@ -56,7 +56,7 @@ public class AKVerticalPad: UIView {
         touchPointView = ModWheelTouchPoint(frame: CGRect(x: -200, y: -200, width: 58, height: 58))
         touchPointView.center = CGPoint(x: centerPointX, y: self.bounds.size.height / 2)
         touchPointView.isOpaque = false
-        self.addSubview(touchPointView)
+        addSubview(touchPointView)
     }
 
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -115,7 +115,7 @@ public class AKVerticalPad: UIView {
         UIView.animate(
             withDuration: 0.05,
             delay: 0.0,
-            options: UIViewAnimationOptions(),
+            options: UIView.AnimationOptions(),
             animations: { self.touchPointView.center = CGPoint(x: self.centerPointX,
                                                                y: centerPointY + self.yVisualAdjust)
             },
@@ -131,15 +131,24 @@ public class AKVerticalPad: UIView {
 
     func setPercentagesWithTouchPoint(_ touchPoint: CGPoint, began: Bool = false) {
         y = CGFloat((0.0 ... 1.0).clamp(1 - touchPoint.y / self.bounds.size.height))
+        let hx: CGFloat = 1.1
+        let hc: CGFloat = -(hx-1)/2
+        y = CGFloat((0.0 ... 1.0).clamp(y * hx + hc))
         touchPointView.center = CGPoint(x: centerPointX, y: touchPoint.y + yVisualAdjust)
         verticalValue = Double(y).denormalized(to: verticalRange, taper: verticalTaper)
         callback(verticalValue)
-
     }
 }
 
 // This is just to suppress warnings when passing AKVerticalPad as a payload to DSP setter
 extension AKVerticalPad: S1Control {
+    var defaultCallback: () -> Void {
+        get {
+            return { }
+        }
+        set { }
+    }
+
     var value: Double {
         get {
             return verticalValue

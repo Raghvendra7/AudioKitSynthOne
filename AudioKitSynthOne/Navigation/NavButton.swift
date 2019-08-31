@@ -41,23 +41,25 @@ class NavButton: UIView {
     @IBInspectable open var rotation: CGFloat = 0
 
     override func draw(_ rect: CGRect) {
-        NavButtonStyleKit.drawNavButton(isOn: CGFloat(value), rotation: rotation, text: buttonText)
+        NavButtonStyleKit.drawNavButton(frame: CGRect(x: 0,
+                                                      y: 0,
+                                                      width: self.bounds.width,
+                                                      height: self.bounds.height),
+                                        isOn: CGFloat(value),
+                                        rotation: rotation,
+                                        text: buttonText)
     }
 
     // MARK: - Handle Touches
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for _ in touches {
-            //isOn = true
-            //self.setNeedsDisplay()
             callback(value)
         }
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         for _ in touches {
-            //isOn = false
-            //self.setNeedsDisplay()
         }
     }
 
